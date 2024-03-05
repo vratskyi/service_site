@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import logo from '/src/images/logo.png'
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="navbar-center">
+    <a href={`/${lang}/`} class="btn btn-ghost w-32 not-prose"><Image id="logo" src={logo} alt="Замовити розробку сайту в Україні" format="avif" /></a>
+</div>

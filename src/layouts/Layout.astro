@@ -1,15 +1,18 @@
 ---
 import Head from "../components/head/Head.astro";
 import Header from "../components/head/Header.astro";
+import { getLangFromUrl } from '../i18n/utils';
 
-const { title = 'Сервис' } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const { title = 'VRATSKYI' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="ua-UK">
+<html lang={lang}>
   <Head title={title} />
-  <body class="mx-auto w-full max-w-[1024px] cursor-default"> 
+  <body class="mx-auto w-full max-w-[1024px] cursor-default prose"> 
     <Header transition:persist />
     <slot />
+
   </body>
 </html>

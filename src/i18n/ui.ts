@@ -21,6 +21,7 @@ export const languages = {
       'nav.home': 'Головна',
       'nav.about': 'Про мене',
       'nav.portfolio': 'Портфоліо',
+      'nav.order': 'Замовити',
       'footer.copyright': 'Авторське право © <span id="currentYear"></span> Всі права захищені.',
       'portfolio.subDesc': 'Використані технології:',
       'portfolio.externalButton': 'Дивитися'
@@ -30,6 +31,7 @@ export const languages = {
         'nav.home': 'Главная',
         'nav.about': 'Обо мне',
         'nav.portfolio': 'Портфолио',
+        'nav.order': 'Заказать',
         'footer.copyright': 'Авторское право © <span id="currentYear"></span> Все права защищены.',
         'portfolio.subDesc': 'Использованные технологии:',
         'portfolio.externalButton': 'Смотреть'
