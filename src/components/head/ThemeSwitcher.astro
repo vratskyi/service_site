@@ -15,7 +15,7 @@
   // Установка темы по умолчанию
   let defaultTheme = 'dracula';
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    defaultTheme = 'cmyk';
+    defaultTheme = 'cupcake';
   }
 
   // Проверка cookies
@@ -25,16 +25,16 @@
   }
 
   document.documentElement.setAttribute('data-theme', defaultTheme);
-  themeSwitcher.checked = defaultTheme === 'cmyk';
+  themeSwitcher.checked = defaultTheme === 'cupcake';
 
   // Установка логотипа в зависимости от темы
-  logoImage.src = defaultTheme === 'cmyk' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+  logoImage.src = defaultTheme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
 
   themeSwitcher.addEventListener('change', function (event) {
     let theme;
     if (event.target.checked) {
       // Если переключатель включен, устанавливаем светлую тему
-      theme = 'cmyk';
+      theme = 'cupcake';
       logoImage.src = '/src/images/logo-dark.png';
     } else {
       // Если переключатель выключен, устанавливаем темную тему

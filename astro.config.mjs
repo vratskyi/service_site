@@ -14,20 +14,14 @@ export default defineConfig({
   })],
   // i18n settings
   i18n: {
-    defaultLocale: "ua",
-    locales: ["ua", {
-      path: "ua",
-      codes: ["ua", "ua-UK"]
-    }, "ru", {
-      path: "ru",
-      codes: ["ru", "ru-RU"]
-    }],
+    defaultLocale: "ru",
+    locales: ["ru", "ua"],
     routing: {
       prefixDefaultLocale: false
       // redirectToDefaultLocale: false
     },
     fallback: {
-      ru: "ua"
+      ua: "ru"
     }
   },
   prefetch: {

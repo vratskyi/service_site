@@ -1,5 +1,6 @@
 ---
 import { languages } from "../../i18n/ui";
+import { useTranslatedPath } from "../../i18n/utils";
 ---
 
 
@@ -10,35 +11,35 @@ import { languages } from "../../i18n/ui";
     </svg>
   </div>
   <ul tabindex="0" id="langSelect" class="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52">
-      {
-        Object.entries(languages).map(([lang, label]) => (
-          <li value={lang}><a>{label}</a></li>
-          ))
-      }
+    {
+      Object.entries(languages).map(([lang, label]) => (
+        <li><a href={useTranslatedPath(lang)('/')}>{label}</a></li>
+      ))
+    }
   </ul>
 </div>
 
 
-<script type="text/javascript" transition:persist>
+<!-- <script type="text/javascript" transition:persist>
     document.addEventListener('astro:page-load', () => {
   let selectedLang = document.cookie.replace(
     /(?:(?:^|.*;\s*)selectedLang\s*\=\s*([^;]*).*$)|^.*$/,
     "$1"
   );
-  // Если cookie selectedLang не установлен, установить его на ua
+  // Если cookie selectedLang не установлен, установить его на ru
   if (!selectedLang) {
-    selectedLang = "ua";
+    selectedLang = "ru";
     document.cookie = "selectedLang=" + selectedLang + "; path=/";
   }
   const langSelect = document.getElementById("langSelect");
   if (langSelect) {
-    const selectedOption = langSelect.querySelector(`li[value="${selectedLang}"]`);
+    const selectedOption = langSelect.querySelector(`a[href="${selectedLang}"]`);
     if (selectedOption) {
       selectedOption.classList.add('selected');
     }
-    langSelect.querySelectorAll('li').forEach(function(li) {
-      li.addEventListener('click', function () {
-        document.cookie = "selectedLang=" + this.getAttribute('value') + "; path=/";
+    langSelect.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function () {
+        document.cookie = "selectedLang=" + this.getAttribute('href') + "; path=/";
         let newPath = window.location.pathname.replace(
           /\/[a-z]{2}\//,
           "/" + this.getAttribute('value') + "/"
@@ -52,4 +53,4 @@ import { languages } from "../../i18n/ui";
   }
 });
 
-</script>
+</script> -->

@@ -5,7 +5,7 @@ import Socials from '../Socials.astro'
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<div class="flex justify-end my-5 p-3 z-[41]">
+<div class="flex justify-end my-5 p-3 !z-[100]">
     <label for="my-drawer">
         <svg role="button" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
             <path fill="currentColor" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1S1 5.925 1 12s4.925 11 11 11M8.818 7.403L12 10.586l3.182-3.182l1.414 1.414L13.414 12l3.182 3.182l-1.415 1.414L12 13.414l-3.182 3.182l-1.415-1.414L10.586 12L7.403 8.818z" />
@@ -15,11 +15,11 @@ const t = useTranslations(lang);
 
 
 <div class="divider divider-base-content">Меню</div>
-<div class="bg-base-200 h-full grid place-self-start rounded-box">
+<div class="bg-base-200 h-full grid place-self-start rounded-box !z-[100]">
     <ul class="menu p-4 w-80 text-base-content">
         <li><a href={`/${lang}/`}>{t('nav.home')}</a></li>
         <li><a href={`/${lang}/portfolio`}>{t('nav.portfolio')}</a></li>
-        <li><a href={`/${lang}/about`}>{t('nav.about')}</a></li>
+        <li><a href={`/${lang}/services`}>{t('nav.services')}</a></li>
     </ul>
 
 <Socials />

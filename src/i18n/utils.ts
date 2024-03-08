@@ -2,7 +2,7 @@ import { ui, defaultLang, showDefaultLang, routes } from './ui';
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/');
-  if (lang in ui) return lang as keyof typeof ui;
+  if (lang && lang in ui) return lang as keyof typeof ui;
   return defaultLang;
 }
 
@@ -15,14 +15,14 @@ export function useTranslations(lang: keyof typeof ui) {
 export function useTranslatedPath(lang: keyof typeof ui) {
   return function translatePath(path: string, l: string = lang) {
     const pathName = path.startsWith('/') ? path.substring(1) : path;
-    const hasTranslation = defaultLang !== l && routes[l] !== undefined && routes[l][pathName] !== undefined;
+    const hasTranslation = l !== defaultLang && routes[l] !== undefined && routes[l][pathName] !== undefined;
     let translatedPath = hasTranslation ? routes[l][pathName] : path;
 
     if (translatedPath.startsWith('/')) {
       translatedPath = translatedPath.substring(1);
     }
 
-    return !showDefaultLang && l === defaultLang ? translatedPath : `/${l}/${translatedPath}`;
+    return !showDefaultLang && l === defaultLang ? `/${translatedPath}` : `/${l}/${translatedPath}`;
   }
 }
 

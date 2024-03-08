@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div id="timeline" class="bg-base-100 mt-[200px] p-5 lg:p-10 rounded-box">
     <div class="grid gap-y-20">
 
@@ -6,9 +13,11 @@
             <a href="#timeline">
               <svg  class="inline-block w-6 h-6 stroke-current hover:text-primary duration-150" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M20 10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4zm-6 4h-4v-4h4z" /></svg>
             </a>
-            <h3 class="badge badge-neutral text-lg font-thin">ну зовсім</h3>
+            <h3 class="badge badge-neutral text-lg font-thin">{t('about.subTitle')}</h3>
           </div>
-          <h2 class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">Трошки про мене</h2>
+          <h2 class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            {t('about.title')}
+          </h2>
         </div>
     
         <div class="grid place-content-center">
@@ -19,8 +28,8 @@
                   </div>
                   <div class="timeline-start md:text-end mb-10">
                     <time class="font-mono italic">2010</time>
-                    <div class="text-lg font-black">Дослідження технологій у дитинстві</div>
-                    Помітив, що батько багато часу проводить за комп'ютером, випросив для себе, отримав свій перший комп'ютер із процесором Intel Core 2 Duo і відеокартою GeForce 7800 GTX.
+                    <div class="text-lg font-black">{t('about.timeline.1-story.title')}</div>
+                    {t('about.timeline.1-story.description')}
                   </div>
                   <hr class="bg-primary" />
                 </li>
@@ -31,8 +40,8 @@
                   </div>
                   <div class="timeline-end mb-10">
                     <time class="font-mono italic">2016</time>
-                    <div class="text-lg font-black">Навчання у ВНЗ</div>
-                    Навчання на факультеті "Комп'ютерні системи та комплекти", вивчення мов програмування, веб-розробки та Linux. Навчився писати програми на Pascal і Delphi, викладав вихідний код програм у своєму блозі на платформі WordPress, доречі який жив і досі, <a class="link link-primary" href="https://freeexpa.wordpress.com/" target="_blank">переглянути.</a>
+                    <div class="text-lg font-black">{t('about.timeline.2-story.title')}</div>
+                     <div set:html={t('about.timeline.2-story.description')}></div>
                   </div>
                   <hr class="bg-primary"  />
                 </li>
@@ -43,8 +52,8 @@
                   </div>
                   <div class="timeline-start md:text-end mb-10">
                     <time class="font-mono italic">2017</time>
-                    <div class="text-lg font-black">Шлях до веб-розробки</div>
-                    Вивчення CSS, HTML, JavaScript і Python. Під час навчання в коледжі опановував CSS-стилі, мову розмітки HTML, і стикався з плаваючими елементами, що було справжнім кошмаром. Перерва від JavaScript призвела до вивчення Python з його зрозумілим і лаконічним синтаксисом. Писав невеликі програми з бібліотеками для створення користувацьких інтерфейсів на QT5.
+                    <div class="text-lg font-black">{t('about.timeline.3-story.title')}</div>
+                    {t('about.timeline.3-story.description')}
                   </div>
                   <hr class="bg-primary"  />
                 </li>
@@ -55,8 +64,8 @@
                   </div>
                   <div class="timeline-end mb-10">
                     <time class="font-mono italic">2018</time>
-                    <div class="text-lg font-black">Знайомство з CMS</div>
-                    Заглибився у веб-розробку, вивчаючи WordPress і його плагіни, а також займаючись оптимізацією, налаштуванням серверів для WordPress, розгортанням Apache і ввімкненням стиснення gzip на локальному сервері. Усі ці теми стали для мене захопливими і мотивували вчитися, щоб зрозуміти, як вони працюють.
+                    <div class="text-lg font-black">{t('about.timeline.4-story.title')}</div>
+                    {t('about.timeline.4-story.description')}
                   </div>
                   <hr class="bg-primary"  />
                 </li>
@@ -67,8 +76,8 @@
                 </div>
                   <div class="timeline-start md:text-end mb-10">
                     <time class="font-mono italic">2019</time>
-                    <div class="text-lg font-black">Перша Робота</div>
-                    У процесі дорослішання і пошуку роботи отримав офер і працював в компанії, що спеціалізується на розробці сайтів на WordPress. Відповідальністю було управління сторінками сайтів і взаємодія з бекенд-розробниками. Отримав цінний досвід, особливо з огляду на можливість заробляти на цьому.
+                    <div class="text-lg font-black">{t('about.timeline.5-story.title')}</div>
+                    {t('about.timeline.5-story.description')}
                   </div>
                     <hr class="bg-primary"  />
                 </li>
@@ -79,9 +88,9 @@
                 </div>
                     <div class="timeline-end mb-10">
                       <time class="font-mono italic">2021 - 2022</time>
-                      <div class="text-lg font-black">Фрілансерська діяльність</div>
-                          Ставши фрілансером, отримав свободу вибору клієнтів, встановлення своїх власних термінів і роботи над проєктами з нуля. Відсутність необхідності працювати з чужим кодом суттєво полегшила мою роботу. Фріланс приносить незліченну кількість переваг, і це кайфово.
-                          <p> На фрілансі розробив кілька веб-сайтів, включно з онлайн-магазином для бренду Byshikat, приватної швейної фабрики жіночого взуття.</p>
+                      <div class="text-lg font-black">{t('about.timeline.6-story.title')}</div>
+                      {t('about.timeline.6-story.description')}
+                          <p>{t('about.timeline.6-story.subDescription')}</p>
                     </div>
                     <hr class="bg-primary"  />
                 </li>
@@ -92,8 +101,8 @@
                 </div>
                     <div class="timeline-start md:text-end mb-10">
                       <time class="font-mono italic">2024</time>
-                      <div class="text-lg font-black">Наші Дні</div>
-                      Наразі вивчаю Astro Framework, сайт написаний на цій технології. Активно практикуюся писати на JavaScript, вивчаю Vue. Пройдено довгий шлях, визначився з тим, що мені дійсно подобається. Зараз підтримую розробляю та оновлюю сайт кліента, та розробляю власні проекти. Так, це був довгий шлях, але в майбутньому буде ще цікавіше.
+                      <div class="text-lg font-black">{t('about.timeline.7-story.title')}</div>
+                      {t('about.timeline.7-story.description')}
                     </div>
                     <hr class="bg-primary"  />
                 </li>
@@ -104,8 +113,8 @@
                 </div>
                     <div class="timeline-end mb-10">
                       <time class="font-mono italic">2025 +</time>
-                      <div class="text-lg font-black">Плани на майбутне</div>
-                      Перейти на full-stack розробника (MEVN - стак), глибше вивчати базы данних (Redis, MongoDB), Впевнено володіти RestAPI. Запустити свій онлайн проект. 
+                      <div class="text-lg font-black">{t('about.timeline.8-story.title')}</div>
+                      {t('about.timeline.8-story.description')}
                     </div>
                     <hr />
                   </li>
