@@ -5,39 +5,49 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="text-sm hidden md:inline-flex pt-1">{t("nav.city")} 🕐<span id="weather"></span></div>
+<div class="text-sm hidden md:inline-flex pt-1">
+  {t("nav.city")} 🕐<span id="weather"></span>
+</div>
 
 <script type="text/javascript" transition:persist>
-   document.addEventListener("astro:page-load", () => {
-      const api =
-        "http://api.weatherapi.com/v1/current.json?key=f93e372191eb42b981702543240903&q=Kyiv&aqi=no";
+  document.addEventListener("astro:page-load", () => {
+    const api =
+      "http://api.weatherapi.com/v1/current.json?key=f93e372191eb42b981702543240903&q=Kyiv&aqi=no";
 
-      async function weather() {
-        const response = await fetch(api);
-        let json = await response.json();
+    async function weather() {
+      const response = await fetch(api);
+      let json = await response.json();
 
-        const temp = json.current.feelslike_c;
-        const localtime = json.location.localtime;
-        const time = localtime.slice(10, 15).replace(/\s/g, "");
+      const temp = json.current.feelslike_c;
+      const localtime = json.location.localtime;
+      const time = localtime.slice(10, 16).replace(/\s/g, "");
 
-        const cold = '❄️'
-        const warm = '🌞'
-        const semiWarm = '⛅'
+      const cold = "❄️";
+      const warm = "🌞";
+      const semiWarm = "⛅";
 
+      const roundedTemp = Math.round(Number(temp));
 
-        if (temp <= 0) {
-          tempIcon = cold
-        } else if (temp >= 10) {
-          tempIcon = semiWarm
-        } else {
-          tempIcon = warm
-        }
+      // console.log(`Temperature: ${temp}`);
+      // console.log(`Rounded Temperature: ${roundedTemp}`);
+      // console.log(`Local Time: ${time}`);
 
-        console.log(tempIcon)
-
-        const weather = document.getElementById("weather");
-        weather.innerHTML = `&nbsp;${time},&nbsp;${tempIcon}&nbsp;${temp}`;
+      if (roundedTemp >= 0) {
+        tempIcon = cold;
+        // console.log("Cold Weather");
+      } else if (roundedTemp >= 10) {
+        tempIcon = semiWarm;
+        // console.log("Semi-warm Weather");
+      } else {
+        tempIcon = warm;
+        // console.log("Warm Weather");
       }
-      weather();
+
+      // console.log(`Selected Icon: ${tempIcon}`);
+
+      const weather = document.getElementById("weather");
+      weather.innerHTML = `&nbsp;${time},&nbsp;${tempIcon}&nbsp;${roundedTemp}°C`;
+    }
+    weather();
   });
 </script>
