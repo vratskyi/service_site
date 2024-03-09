@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="text-sm hidden md:inline-block">{t("nav.city")} <span id="weather"></span></div>
+<div class="text-sm hidden md:inline-flex pt-1">{t("nav.city")} <span id="weather"></span></div>
 
 <script type="text/javascript" transition:persist>
    document.addEventListener("astro:page-load", () => {
