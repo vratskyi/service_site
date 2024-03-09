@@ -17,8 +17,8 @@ export default defineConfig({
     defaultLocale: "ru",
     locales: ["ru", "ua"],
     routing: {
-      prefixDefaultLocale: false
-      // redirectToDefaultLocale: false
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true
     },
     fallback: {
       ua: "ru"
