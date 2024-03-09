@@ -22,7 +22,12 @@ export function useTranslatedPath(lang: keyof typeof ui) {
       translatedPath = translatedPath.substring(1);
     }
 
-    return !showDefaultLang && l === defaultLang ? `/${translatedPath}` : `/${l}/${translatedPath}`;
+    // Check if the path is the home page
+    if (pathName === '' && l === defaultLang) {
+      return `/${translatedPath}`;
+    }
+
+    return `/${l}/${translatedPath}`;
   }
 }
 

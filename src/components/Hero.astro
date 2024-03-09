@@ -8,6 +8,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
+<div class="absolute top-0 left-0 right-0 bottom-0 bg-dots z-[-1]"></div>
+
 <section class="mt-[100px] rounded-box bg-base-200 p-5 lg:p-10 grid">
 
 
@@ -23,9 +25,6 @@ const t = useTranslations(lang);
           </h1>
           <h2 class="text-5xl font-black">
             {t('hero.subTitle')}<br />
-         <span class="font-thin text-base-content/20"> 
-          {t('hero.subTitleExtra')}
-        </span>
         </h2>
       </div>
       <div class="mt-10 grid gap-y-5">
@@ -38,15 +37,13 @@ const t = useTranslations(lang);
         </div>
       </div>
 
-      <div class="avatar order-first lg:order-last !z-0 relative">
-        <div class="rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10 size-[250px] !z-0">
-         <Image src={author} alt="Oleksii Vratskyi" format='avif' class='!z-0'>
-        </div>
+      <div class="order-first lg:order-last">
+        <Image src={author} alt="Oleksii Vratskyi" format='avif' class=' rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10 size-[250px] !z-0'>
       </div>
 
     </div>
   </div>
 
-  <Stats />
+  <Stats transition:persist />
 
 </section>

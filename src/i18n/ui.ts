@@ -17,12 +17,13 @@ export const languages = {
 
   export const ui = {
     ua: {
+      'nav.city': 'Київ',
       'nav.lang': 'ua Українська',
       'nav.home': 'Головна',
       'nav.about': 'Про мене',
       'nav.portfolio': 'Портфоліо',
       'nav.services': 'Сервіси',
-      'nav.order': 'Послуги',
+      'nav.order': 'Сервіси',
       'footer.copyright': 'Авторське право © <span id="currentYear"></span> Всі права захищені.',
       'portfolio.subDesc': 'Використані технології:',
       'portfolio.externalButton': 'Дивитися',
@@ -58,12 +59,13 @@ export const languages = {
       'about.timeline.8-story.description': "Перейти на full-stack розробника (MEVN - стак), глибше вивчати базы данних (Redis, MongoDB), Впевнено володіти RestAPI. Запустити свій онлайн проект.",
     },
     ru: {
+        'nav.city': 'Киев',
         'nav.lang': 'ru Русский',
         'nav.home': 'Главная',
         'nav.about': 'Обо мне',
         'nav.portfolio': 'Портфолио',
         'nav.services': 'Сервисы',
-        'nav.order': 'Услуги',
+        'nav.order': 'Сервисы',
         'footer.copyright': 'Авторское право © <span id="currentYear"></span> Все права защищены.',
         'portfolio.subDesc': 'Использованные технологии:',
         'portfolio.externalButton': 'Смотреть',

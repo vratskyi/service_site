@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="text-sm hidden md:inline-block">{t("nav.city")} <span id="weather"></span></div>
+
+<script type="text/javascript" transition:persist>
+   document.addEventListener("astro:page-load", () => {
+      const api =
+        "http://api.weatherapi.com/v1/current.json?key=f93e372191eb42b981702543240903&q=Kyiv&aqi=no";
+
+      async function weather() {
+        const response = await fetch(api);
+        let json = await response.json();
+
+        const temp = json.current.feelslike_c;
+        const localtime = json.location.localtime;
+        const time = localtime.slice(10, 15).replace(/\s/g, "");
+
+        const weather = document.getElementById("weather");
+        weather.innerHTML = `${time}, погода: ${temp}`;
+      }
+      weather();
+  });
+</script>
