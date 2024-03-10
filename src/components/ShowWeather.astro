@@ -32,10 +32,10 @@ const t = useTranslations(lang);
       // console.log(`Rounded Temperature: ${roundedTemp}`);
       // console.log(`Local Time: ${time}`);
 
-      if (roundedTemp >= 0) {
-        tempIcon = cold;
-        // console.log("Cold Weather");
-      } else if (roundedTemp >= 10) {
+      if (roundedTemp < 0) {
+      tempIcon = cold;
+      // console.log("Cold Weather");
+      } else if (roundedTemp >= 0 && roundedTemp < 10) {
         tempIcon = semiWarm;
         // console.log("Semi-warm Weather");
       } else {
