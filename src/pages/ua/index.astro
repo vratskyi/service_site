@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro'
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
 import About from '../../components/About.astro'
 import Skills from '../../components/Skills.astro'
+import MyGithub from "../../components/MyGithub.astro";
 
 
 getAbsoluteLocaleUrl("ua");
@@ -15,4 +16,5 @@ getAbsoluteLocaleUrl("ua");
         <About transition:persist />
     </div>
     <Skills transition:persist />
+    <MyGithub transition:persist />
 </Layout>

@@ -64,12 +64,20 @@ a {
 }
 
 .bg-dots {
-  background-image: radial-gradient(var(--fallback-bc, oklch(var(--bc) / 0.15)), 2px, transparent 2px);
-  background-size: 120px 120px;
-  background-color: rgba(71, 212, 255, 0);
+  background-image: radial-gradient(var(--fallback-a, oklch(var(--a) / 0.3)), 2px, transparent 2px);
   box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.1));
+  background-size: 120px 120px;
+}
+
+.bg-grid {
+  background-image: linear-gradient(var(--fallback-s, oklch(var(--s) / 0.04)) 1px, transparent 1px), linear-gradient(to right, var(--fallback-a, oklch(var(--a) / 0.03)) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 .inset-bg {
   box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.3));
+}
+
+.inset-bg-a {
+  box-shadow: inset 0px 0px 50px var(--fallback-a, oklch(var(--a) / 0.1));
 }
