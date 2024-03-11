@@ -63,7 +63,6 @@ a {
     }
 }
 
-
 .bg-dots {
   background-image: radial-gradient(var(--fallback-bc, oklch(var(--bc) / 0.15)), 2px, transparent 2px);
   background-size: 120px 120px;
@@ -73,10 +72,4 @@ a {
 
 .inset-bg {
   box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.3));
-}
-
-.my-link[data-tippy-content] {
-  position: relative;
-  transition: color 0.3s;
-  color: var(--fallback-s, oklch(var(--s) / 1));
 }
