@@ -71,6 +71,10 @@ a {
   box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.1));
 }
 
+.inset-bg {
+  box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.3));
+}
+
 .my-link[data-tippy-content] {
   position: relative;
   transition: color 0.3s;

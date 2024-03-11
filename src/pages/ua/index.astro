@@ -3,14 +3,16 @@ import Layout from "../../layouts/Layout.astro";
 import Hero from '../../components/Hero.astro'
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
 import About from '../../components/About.astro'
+import Skills from '../../components/Skills.astro'
 
 
 getAbsoluteLocaleUrl("ua");
 ---
 
 <Layout title='VRATSKYI'>
-
-    <Hero transition:persist />
-    <About transition:persist />
-
+    <div class="mx-auto w-full max-w-[1024px]">
+        <Hero transition:persist />
+        <About transition:persist />
+    </div>
+    <Skills transition:persist />
 </Layout>

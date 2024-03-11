@@ -10,9 +10,10 @@ const { title = 'VRATSKYI' } = Astro.props;
 <!doctype html>
 <html lang={lang}>
   <Head title={title} />
-  <body class="mx-auto w-full max-w-[1024px] cursor-default prose"> 
-    <Header transition:persist />
+  <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased"> 
+    <div class="mx-auto w-full max-w-[1024px]">
+      <Header transition:persist />
+    </div>
     <slot />
-
   </body>
 </html>
