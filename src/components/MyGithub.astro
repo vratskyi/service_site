@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="grid mx-auto lg:min-w-full lg:h-full lg:max-h-svh relative">
     <div class="absolute top-0 left-0 right-0 bottom-0 bg-grid z-[-1]"></div>
     
@@ -27,21 +34,16 @@
                     </rect>
                 </svg>
                 <div class="grid gap-y-5">
-                    <h2 class="text-6xl my-auto font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Моя святыня GitHub</h2>
-                    <a class="btn btn-active btn-sm btn-primary place-self-start pt-1" href="https://github.com/vratskyi" target="_blank">Смотреть мой GitHub</a>
+                    <h2 class="text-6xl my-auto font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{t('mygithub.title')}</h2>
+                    <a class="btn btn-active btn-sm btn-primary place-self-start pt-1" href="https://github.com/vratskyi" target="_blank">{t('mygithub.button')}</a>
                 </div>
             </div>
         </div>
         <p class="text-pretty text-3xl antialiased">
-          С более чем четырьмя годами опыта в веб-разработке, я как Пегий Дудочник из Силиконовой
-          Долины. Мой опыт настолько огромен, что даже баги начинают извиняться и
-          просить прощения за свое существование. 
-  
-          Когда я пишу код — мои пальцы танцуют на клавиатуре,
-          как профессиональные танцоры на вечеринке.
-        <p class="text-pretty text-xl antialiased italic text-success/70">
-            Почему функции не ходят в театр? Потому что им всегда не хватает аргументов.    
+            {t('mygithub.description')}
         </p>
+        <p class="text-pretty text-xl antialiased italic text-success/70">
+            {t('mygithub.joke')}    
         </p>
     </div>
 </section>
