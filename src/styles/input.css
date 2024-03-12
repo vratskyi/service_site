@@ -64,7 +64,7 @@ a {
 }
 
 .bg-dots {
-  background-image: radial-gradient(var(--fallback-a, oklch(var(--a) / 0.3)), 2px, transparent 2px);
+  background-image: radial-gradient(var(--fallback-a, oklch(var(--a) / 0.3)), 1px, transparent 1px);
   box-shadow: inset 0px 0px 200px var(--fallback-s, oklch(var(--s) / 0.1));
   background-size: 120px 120px;
 }
