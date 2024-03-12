@@ -1,0 +1,42 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Socials from './Socials.astro';
+import Logo from './Logo.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="footer footer-center py-20 px-10 bg-base-300 text-base-content rounded">
+    <nav class="grid grid-flow-col gap-4">
+      <a href="#" class="link link-hover hover:text-primary duration-150">{t('nav.home')}</a>
+      <a href="#" class="link link-hover hover:text-primary duration-150">{t('nav.portfolio')}</a>
+      <a href="#" class="link link-hover hover:text-primary duration-150">{t('nav.services')}</a>
+    </nav> 
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <Socials />
+      </div>
+    </nav> 
+    <aside>
+      <p>Авторское право © <span id='currentYear'></span> Все права защищены.</p>
+      <Logo />
+    </aside>
+  </footer>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      // Получение текущей даты
+      let currentDate = new Date();
+      // Извлечение текущего года из объекта даты
+      let currentYear = currentDate.getFullYear();
+      // Получение элемента по идентификатору
+        let yearElement = document.getElementById('currentYear');
+        // Проверка существования элемента перед установкой его textContent
+        if (yearElement !== null) {
+          yearElement.textContent = String(currentYear);
+        } else {
+          console.error("Element with ID 'currentYear' not found.");
+        }
+      });
+    </script>

@@ -5,16 +5,19 @@ import { getAbsoluteLocaleUrl } from 'astro:i18n';
 import About from '../components/About.astro'
 import Skills from '../components/Skills.astro'
 import MyGithub from '../components/MyGithub.astro'
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
 
 getAbsoluteLocaleUrl("ru");
 ---
 
 <Layout title='VRATSKYI'>
     <div class="mx-auto w-full max-w-[1024px]">
-        <Hero transition:persist />
-        <About transition:persist />
+        <Hero />
+        <About />
     </div>
-    <Skills transition:persist />
-    <MyGithub transition:persist />
-
+    <Skills />
+    <MyGithub />
+    <CTA />
+    <Footer transition:persist>
 </Layout>
