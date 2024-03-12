@@ -1,11 +1,10 @@
 import { defineConfig } from 'astro/config';
-import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind(), compress({
+  integrations: [tailwind(), compress({
     CSS: true,
     HTML: false,
     Image: true,
@@ -29,6 +28,7 @@ export default defineConfig({
     defaultStrategy: 'viewport'
   },
   experimental: {
-    clientPrerender: true
+    clientPrerender: true,
+    directRenderScript: true
   },
 });

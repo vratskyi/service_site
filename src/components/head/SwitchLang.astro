@@ -18,39 +18,3 @@ import { useTranslatedPath } from "../../i18n/utils";
     }
   </ul>
 </div>
-
-
-<!-- <script type="text/javascript" transition:persist>
-    document.addEventListener('astro:page-load', () => {
-  let selectedLang = document.cookie.replace(
-    /(?:(?:^|.*;\s*)selectedLang\s*\=\s*([^;]*).*$)|^.*$/,
-    "$1"
-  );
-  // Если cookie selectedLang не установлен, установить его на ru
-  if (!selectedLang) {
-    selectedLang = "ru";
-    document.cookie = "selectedLang=" + selectedLang + "; path=/";
-  }
-  const langSelect = document.getElementById("langSelect");
-  if (langSelect) {
-    const selectedOption = langSelect.querySelector(`a[href="${selectedLang}"]`);
-    if (selectedOption) {
-      selectedOption.classList.add('selected');
-    }
-    langSelect.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function () {
-        document.cookie = "selectedLang=" + this.getAttribute('href') + "; path=/";
-        let newPath = window.location.pathname.replace(
-          /\/[a-z]{2}\//,
-          "/" + this.getAttribute('value') + "/"
-        );
-        if (newPath.includes("/blog/")) {
-          newPath = newPath.substring(0, newPath.indexOf("/blog/") + 6);
-        }
-        window.location.href = newPath;
-      });
-    });
-  }
-});
-
-</script> -->
