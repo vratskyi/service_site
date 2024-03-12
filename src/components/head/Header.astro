@@ -3,6 +3,10 @@ import OrderButton from '../buttons/OrderButton.astro'
 import Logo from '../Logo.astro'
 import MenuButton from '../buttons/MenuButton.astro'
 import ShowWeather from '../ShowWeather.astro'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="navbar bg-base-200 rounded-box px-5 fixed top-0 left-0 right-0 w-full max-w-[1024px] mx-auto z-50">
@@ -12,7 +16,7 @@ import ShowWeather from '../ShowWeather.astro'
         <MenuButton transition:persist />
         <div class="not-prose place-self-center text-xs md:text-sm badge badge-success pt-3 pb-2 ">
           <h2 class="text-neural">
-            свободен
+            {t('nav.hireable')}
           </h2>
         </div>
       </div>
