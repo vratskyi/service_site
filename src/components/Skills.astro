@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mt-[80px] lg:mt-[150px] min-w-full inset-bg prose-invert">
     <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
       <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -7,12 +14,12 @@
     </div>
     <div class="mx-auto max-w-5xl px-6 lg:px-8">
       <div class="mx-auto w-full max-w-4xl lg:mx-0">
-        <h2 class="text-4xl font-bold sm:text-6xl">⚡Мои супер способности </h2>
-        <p class="mt-6 text-lg leading-8 max-w-xl text-pretty">Тут перечислены технологии и инструменты которыми я владею и постоянно использую в своей работе.</p>
+        <h2 class="text-4xl font-bold sm:text-6xl">{t('skills.title')}</h2>
+        <p class="mt-6 text-lg leading-8 max-w-xl text-pretty">{t('skills.description')}</p>
       </div>
       <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-5xl">
         <div class="mt-24">
-          <h2>💪 Frontend супер силы</h3>
+          <h2>{t('skills.frontend.title')}</h3>
         </div>
         <dl class="mt-16 w-full max-w-5xl grid gap-8 sm:mt-20 gap-y-10 gap-x-5 lg:gap-x-10 grid-flow-row grid-cols-2 md:grid-flow-col md:grid-rows-2 place-content-center md:place-content-start place-items-center md:place-items-start not-prose">
           <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
@@ -27,7 +34,7 @@
             <dd class="text-2xl font-bold text-primary">
               daisyUI
             </dd>
-            <dt class="text-base text-center">UI библиотека для Tailwind CSS</dt>
+            <dt class="text-base text-center">{t('skills.frontend.4-description')}</dt>
           </div>
           <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
             <dd class="text-2xl font-bold">
@@ -86,7 +93,7 @@
           </div>
         </dl>
         <div class="mt-44">
-          <h2>💪 Backend & Технические супер силы</h3>
+          <h2>{t('skills.backend.title')}</h3>
             <dl class="mt-16 w-full max-w-5xl grid gap-8 sm:mt-20 gap-y-10 gap-x-5 lg:gap-x-10 grid-flow-row grid-cols-2 md:grid-flow-col md:grid-rows-2 place-content-center md:place-content-start place-items-center md:place-items-start not-prose">
               <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
                 <dd class="text-2xl font-bold">
@@ -155,7 +162,7 @@
             </dl>
           </div>
           <div class="mt-44">
-            <h2>💪 Разные другие классные супер силы</h3>
+            <h2>{t('skills.another.title')}</h3>
               <dl class="mt-16 w-full max-w-5xl grid gap-8 sm:mt-20 gap-y-10 gap-x-5 lg:gap-x-10 md:grid-flow-col place-content-center md:place-content-between place-items-center md:place-items-start not-prose">
                 <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
                   <dd class="text-2xl font-bold">
@@ -164,7 +171,7 @@
                     </svg>
                   </dd>
                   <dt class="text-base">GitHub</dt>
-                  <dt class="text-base text-center">Пишу разные шаблоны, так-же использую github для своих закрытых проектов.</dt>
+                  <dt class="text-base text-center">{t('skills.another.1-description')}</dt>
                 </div>
                 <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
                   <dd class="text-2xl font-bold">
@@ -175,8 +182,8 @@
                       </g>
                     </svg>
                   </dd>
-                  <dt class="text-base text-center">Настрока хостинга или VPS</dt>
-                  <dt class="text-base text-center">Развертка CMS, настройка CSP, настройка gzip, apache, nginx и тд.</dt>
+                  <dt class="text-base text-center">{t('skills.another.2-title')}</dt>
+                  <dt class="text-base text-center">{t('skills.another.2-description')}</dt>
                 </div>
                 <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
                   <dd class="text-2xl font-bold">
@@ -187,8 +194,8 @@
                       </g>
                     </svg>
                   </dd>
-                  <dt class="text-base text-center">Настройка доменов</dt>
-                  <dt class="text-base text-center">регистрация, перенос, ssl, и тд.</dt>
+                  <dt class="text-base text-center">{t('skills.another.3-title')}</dt>
+                  <dt class="text-base text-center">{t('skills.another.3-description')}</dt>
                 </div>
               <div class="bg-base-100 rounded-box p-5 w-full md:w-60 grid place-content-center place-items-center place-self-stretch gap-y-5">
                 <dd class="text-2xl font-bold">
@@ -211,8 +218,8 @@
                     <rect width="24" height="24" fill="currentColor" mask="url(#lineMdSpeedLoop0)" />
                   </svg>
                 </dd>
-                <dt class="text-base text-center">Оптимизация</dt>
-                <dt class="text-base text-center">Минификация, сжатие, бандлы, light house 90 +</dt>
+                <dt class="text-base text-center">{t('skills.another.4-title')}</dt>
+                <dt class="text-base text-center">{t('skills.another.4-description')}</dt>
               </div>
             </dl>
         </div>

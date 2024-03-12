@@ -22,8 +22,8 @@ const t = useTranslations(lang);
 
   <div class="grid place-content-center place-items-ceter place-self-center mx-auto w-full max-w-xl text-center lg:mx-0 lg:py-32">
     <div>
-      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Мой код. Мои правила. Мои баги.</h2>
-      <p class="mt-6 text-lg leading-8">Как программисты говорят друг другу пока ? <code> return 0;</code></p>
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{t('cta.title')}</h2>
+      <p class="mt-6 text-lg leading-8" set:html={t('cta.joke')}></p>
     </div>
 
 

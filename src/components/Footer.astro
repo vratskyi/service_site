@@ -19,7 +19,7 @@ const t = useTranslations(lang);
       </div>
     </nav> 
     <aside>
-      <p>Авторское право © <span id='currentYear'></span> Все права защищены.</p>
+      <div set:html={t('footer.copyright')}></div>
       <Logo />
     </aside>
   </footer>
