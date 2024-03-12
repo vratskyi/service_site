@@ -7,10 +7,10 @@
 </div>
 
 <script type="text/javascript" transition:persist>
-  document.addEventListener('astro:page-load', () => {
+document.addEventListener('astro:page-load', () => {
   // Переключатель тем
   const themeSwitcher = document.querySelector('.switch-theme input[type="checkbox"]');
-  const logoImage = document.getElementById('logo');
+  const logos = document.querySelectorAll('[id="logo"]');
 
   // Установка темы по умолчанию
   let defaultTheme = 'dracula';
@@ -27,22 +27,29 @@
   document.documentElement.setAttribute('data-theme', defaultTheme);
   themeSwitcher.checked = defaultTheme === 'cupcake';
 
-  // Установка логотипа в зависимости от темы
-  logoImage.src = defaultTheme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+  // Установка логотипов в зависимости от темы
+  logos.forEach(logo => {
+    logo.src = defaultTheme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+  });
 
   themeSwitcher.addEventListener('change', function (event) {
     let theme;
     if (event.target.checked) {
       // Если переключатель включен, устанавливаем светлую тему
       theme = 'cupcake';
-      logoImage.src = '/src/images/logo-dark.png';
     } else {
       // Если переключатель выключен, устанавливаем темную тему
       theme = 'dracula';
-      logoImage.src = '/src/images/logo.png';
     }
+
+    // Установка темы и обновление логотипов
     document.documentElement.setAttribute('data-theme', theme);
     document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+
+    logos.forEach(logo => {
+      logo.src = theme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+    });
   });
 });
+
 </script>
