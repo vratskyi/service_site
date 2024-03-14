@@ -78,7 +78,7 @@ export const languages = {
       'cta.joke': 'Як програмісти кажуть один одному бувай? <code> return 0;</code>',
     },
     ru: {
-        'nav.city': 'Київ',
+        'nav.city': 'Киев',
         'nav.lang': 'ru Русский',
         'nav.home': 'Главная',
         'nav.about': 'Обо мне',
