@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+    image?: {
+        src: ImageMetadata;
+        alt: string;
+    };
+    title: string;
+    description?: string;
+    label?: string;
+    activeButton?: {
+        title: string;
+        link: string;
+    };
+    exturnalButton?: {
+        title: string;
+        link: string;
+    };
+}
+
+
+const { image, title, description, label, activeButton, exturnalButton  } = Astro.props;
+---
+
+<div>
+    <div>
+        {image && (
+            <Image 
+                format='avif'
+                class='w-full max-w-[400px] max-h-[400px] h-full object-cover object-center rounded-box'
+                src={image.src} 
+                alt={image.alt || ''} 
+                width='400'
+                height='300'
+            /> 
+        )}
+    </div>
+    <div class="mt-10">
+        <span class="badge badge-primary">{label}</span>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <div class="grid grid-flow-col gap-x-5 place-items-start place-content-start">
+            {activeButton && (
+                <a class="btn btn-sm btn-primary" href={activeButton.link || ''}>
+                    {activeButton.title || ''}
+                </a>
+            )} 
+            {exturnalButton && (
+                <a class="btn btn-sm btn-outline" href={exturnalButton.link || ''}>
+                    {exturnalButton.title || ''}
+                </a>
+            )} 
+        </div>
+    </div>
+</div>
