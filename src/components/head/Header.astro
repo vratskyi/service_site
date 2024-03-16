@@ -1,36 +1,37 @@
 ---
-import OrderButton from '../buttons/OrderButton.astro'
-import Logo from '../Logo.astro'
-import MenuButton from '../buttons/MenuButton.astro'
-import ShowWeather from '../ShowWeather.astro'
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import OrderButton from "../buttons/OrderButton.astro";
+import Logo from "../Logo.astro";
+import MenuButton from "../buttons/MenuButton.astro";
+import ShowWeather from "../ShowWeather.astro";
+import ImFreeLabel from "./ImFreeLabel.astro";
+import ImBusyLabel from "./ImBusyLabel.astro";
+import { myStatus } from "../../../public/setFreeOrBusyParams";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<header class="fixed top-0 left-0 right-0 mx-auto w-full max-w-full bg-base-200/60 z-50 backdrop-blur-3xl border-b-2 border-secondary/[0.08]">
+
+<header
+  class="fixed top-0 left-0 right-0 mx-auto w-full max-w-full bg-base-200/60 z-50 backdrop-blur-3xl border-b-2 border-secondary/[0.08]"
+>
   <div class="navbar px-5 w-full max-w-[1024px] mx-auto z-50">
-      <div class="navbar-start">
-        <!-- кнопка меню -->
-        <div class="grid grid-flow-col gap-x-5">
-          <MenuButton transition:persist />
-          <div class="not-prose place-self-center text-xs md:text-sm badge badge-success pt-3 pb-2 ">
-            <h2 class="text-neural">
-              {t('nav.hireable')}
-            </h2>
-          </div>
-        </div>
+    <div class="navbar-start">
+      <!-- кнопка меню -->
+      <div class="grid grid-flow-col gap-x-5">
+        <MenuButton transition:persist />
+        {myStatus.status === 'free' ? <ImFreeLabel /> : <ImBusyLabel />}
       </div>
-      <!-- логотип -->
-      <Logo transition:persist />
-      <div class="navbar-end flex space-x-6">
-      <div class="flex space-x-2">
-      </div>
+    </div>
+    <!-- логотип -->
+    <Logo transition:persist />
+    <div class="navbar-end flex space-x-6">
+      <div class="flex space-x-2"></div>
       <div data-da=".socials,648,first" transition:persist>
         <ShowWeather transition:persist />
       </div>
-        <!-- заказать -->
-        <OrderButton transition:persist />
-      </div>
+      <!-- заказать -->
+      <OrderButton transition:persist />
     </div>
+  </div>
 </header>

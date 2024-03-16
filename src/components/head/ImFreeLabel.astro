@@ -1,0 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<div class="not-prose place-self-center text-xs md:text-sm badge badge-success pt-3 pb-2">
+    <div class="tooltip tooltip-bottom" data-tip={t('nav.hireable.free.description')}>
+    <h2 class="text-neural">
+      {t('nav.hireable.free')}
+    </h2>
+  </div>
+</div>
