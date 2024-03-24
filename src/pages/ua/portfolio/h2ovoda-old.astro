@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../../../layouts/Layout.astro'
-import h2ovoda from '../../../images/h2ovoda.png'
+import h2ovodaOld from '../../../images/water-website.png'
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -58,12 +58,13 @@ const t = useTranslations(lang);
 
           <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start mt-[60px] lg:mt-[80px] p-5 md:p-0">
             <div class="p-5">
-                <h1 class="relative">Сайт доставки воды 2.0
+                <h1 class="relative">Сайт доставки воды 1.0
             </h1>
             <p class="prose">
-                Я переделал сайт, чтобы предложить услуги по доставке воды в Белогородке и соседних регионах. 
-                Сайт имеет привлекательный дизайн, удобную верстку и простую интеграцию с аналитическими инструментами для повышения вовлеченности клиентов. 
-                Пользователи могут легко отправить заявку на доставку воды через форму заказа и получить удобный доступ к бутилированной питьевой воде.
+                Разработанный мной сайт предлагает доставку воды в Белогородке и окрестностях. Он имеет привлекательный дизайн, 
+                интуитивно понятную верстку и интеграцию 
+                с аналитическими инструментами для привлечения большего количества клиентов. 
+                Посетители могут легко оставить заявку на доставку воды через форму заказа и получить доступ к бутилированной питьевой воде.
             </p>
             <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start mt-10 bg-base-200/50 backdrop-blur-3xl rounded-box p-5 lg:p-10">
                 <div class="grid place-items-center">
@@ -147,10 +148,10 @@ const t = useTranslations(lang);
             <div class="order-first lg:order-last not-prose">
                 <div class="mockup-browser bg-base-300">
                     <div class="mockup-browser-toolbar">
-                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://h2ovoda.com.ua" target="_blank">https://h2ovoda.com.ua</a></div>
+                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://old.h2ovoda.com.ua/" target="_blank">https://old.h2ovoda.com.ua/</a></div>
                     </div>
                     <div class="flex justify-center bg-base-200">
-                        <Image src={h2ovoda} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" format='avif' alt='H2O Вода' width='600' height='400' />
+                        <Image src={h2ovodaOld} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" alt='H2O Вода' format='avif' width='600' height='400' />
                     </div>
                   </div>
             </div>

@@ -4,6 +4,9 @@ import Layout from '../../../layouts/Layout.astro'
 import PortfolioCard from '../../../components/PortfolioCard.astro'
 import byshikat from '../../../images/online-store-byshikat.png'
 import h2ovoda from '../../../images/h2ovoda.png'
+import h2ovodaOld from '../../../images/water-website.png'
+import vratskyiBlog from '../../../images/ov-main.png'
+import lmdlviv from '../../../images/online-store-lmd.png'
 
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
@@ -127,9 +130,15 @@ const t = useTranslations(lang);
     
     <div class="grid place-items-center place-content-center prose lg:prose-xl text-center mx-auto mb-10">
       <h2>Все проекты</h2>
-      <p>Тут представлены все мои проекты, как коммерчиские так и персональные.</p>
+      <p>
+        Тут представлены все мои проекты, как коммерчиские так и персональные. <br />
+        Так-же можете глянуть мой <a class="link link-primary" href="https://www.behance.net/alexvracky" target="_blank">behance</a>
+      </p>
+      
     </div>
-    <div class="my-10 grid grid-flow-col auto-cols-auto lg:auto-cols-max grid-rows-2 lg:grid-rows-3 place-content-center gap-10 mx-auto w-full max-w-[1280px]">
+
+
+    <div class="my-10 grid grid-cols-1 lg:grid-cols-3 gap-y-10 mx-auto w-full max-w-[1366px] p-5">
       <PortfolioCard 
       image={{
          src: h2ovoda,
@@ -150,15 +159,15 @@ const t = useTranslations(lang);
 
        <PortfolioCard 
        image={{
-          src: byshikat,
-          alt: "online-store-byshikat",
+          src: vratskyiBlog,
+          alt: "Персональный блог и портфолио",
        }},
-       label='вебсайт'
-       title='Заголовок'
-       description='описание'
+       label='персональный сайт'
+       title='Персональный блог и портфолио'
+       description='Этот бесплатный шаблон для последней версии Astro обеспечивает удобство использования и многофункциональность для демонстрации портфолио и создания блога'
        activeButton={{ 
          title: 'Подробнее',
-         link: '/portfolio/byshikat'
+         link: `/${lang}/portfolio/vratskyi-blog`
        }},
        exturnalButton={{ 
          title: 'Смотреть проект',
@@ -168,33 +177,33 @@ const t = useTranslations(lang);
 
         <PortfolioCard 
         image={{
-           src: byshikat,
-           alt: "online-store-byshikat",
+           src: h2ovodaOld,
+           alt: "Сайт доставки воды 1.0",
         }},
-        label='вебсайт'
-        title='Заголовок'
-        description='описание'
+        label='коммерчиский сайт'
+        title='Сайт доставки воды 1.0'
+        description='Сайт для доставки воды в Белогородке обладает стильным дизайном, удобной навигацией и интеграцией с аналитикой для привлечения клиентов. Посетители могут оставить заказ через форму и получить воду.'
         activeButton={{ 
           title: 'Подробнее',
-          link: '/portfolio/byshikat'
+          link: `/${lang}/portfolio/h2ovoda-old`
         }},
         exturnalButton={{ 
           title: 'Смотреть проект',
-          link: 'https://byshikat.com/'
+          link: 'https://old.h2ovoda.com.ua/'
         }}
          />
 
          <PortfolioCard 
          image={{
             src: byshikat,
-            alt: "online-store-byshikat",
+            alt: "Byshikat интернет-магазин обуви",
          }},
-         label='вебсайт'
-         title='Заголовок'
-         description='описание'
+         label='коммерчиский сайт'
+         title='Byshikat интернет-магазин обуви'
+         description='Исследовав аудиторию, я понял, что нужно реализовать подход, аналогичный Instagram, с похожим дизайном. Продажи из Instagram-магазина перешли в интернет-магазин и выросли на 1000%.'
          activeButton={{ 
            title: 'Подробнее',
-           link: '/portfolio/byshikat'
+           link: `/${lang}/portfolio/byshikat`
          }},
          exturnalButton={{ 
            title: 'Смотреть проект',
@@ -204,75 +213,21 @@ const t = useTranslations(lang);
 
           <PortfolioCard 
           image={{
-             src: byshikat,
-             alt: "online-store-byshikat",
+             src: lmdlviv,
+             alt: "Бумажные подарочные пакеты",
           }},
-          label='вебсайт'
-          title='Заголовок'
-          description='описание'
+          label='коммерчиский сайт'
+          title='Бумажные подарочные пакеты'
+          description='Этот интернет-магазин на WordPress и WooCommerce был обновлен с улучшенным дизайном и скоростью загрузки. Благодаря этому увеличилось количество посетителей и продаж. Теперь сайт лидирует в Google по Украине.'
           activeButton={{ 
             title: 'Подробнее',
-            link: '/portfolio/byshikat'
+            link: `/${lang}/portfolio/lmdlvivua`
           }},
           exturnalButton={{ 
             title: 'Смотреть проект',
-            link: 'https://byshikat.com/'
+            link: 'https://lmd.lviv.ua/'
           }}
            />
-
-           <PortfolioCard 
-           image={{
-              src: byshikat,
-              alt: "online-store-byshikat",
-           }},
-           label='вебсайт'
-           title='Заголовок'
-           description='описание'
-           activeButton={{ 
-             title: 'Подробнее',
-             link: '/portfolio/byshikat'
-           }},
-           exturnalButton={{ 
-             title: 'Смотреть проект',
-             link: 'https://byshikat.com/'
-           }}
-            />
-
-            <PortfolioCard 
-            image={{
-               src: byshikat,
-               alt: "online-store-byshikat",
-            }},
-            label='вебсайт'
-            title='Заголовок'
-            description='описание'
-            activeButton={{ 
-              title: 'Подробнее',
-              link: '/portfolio/byshikat'
-            }},
-            exturnalButton={{ 
-              title: 'Смотреть проект',
-              link: 'https://byshikat.com/'
-            }}
-             />
-
-             <PortfolioCard 
-             image={{
-                src: byshikat,
-                alt: "online-store-byshikat",
-             }},
-             label='вебсайт'
-             title='Заголовок'
-             description='описание'
-             activeButton={{ 
-               title: 'Подробнее',
-               link: '/portfolio/byshikat'
-             }},
-             exturnalButton={{ 
-               title: 'Смотреть проект',
-               link: 'https://byshikat.com/'
-             }}
-              />
     </div>
     
 </Layout>
