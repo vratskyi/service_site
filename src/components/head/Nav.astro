@@ -34,6 +34,15 @@ const t = useTranslations(lang);
             </svg>
             {t('nav.home')}
         </a></li>
+        <li><a href={`/${lang}/about`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+            <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="6" r="4" />
+                    <path d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z" />
+                </g>
+            </svg>
+            {t('nav.about')}
+        </a></li>
         <li><a href={`/${lang}/portfolio`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
             <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
