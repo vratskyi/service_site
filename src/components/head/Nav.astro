@@ -1,8 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import Socials from '../Socials.astro'
 import SwitchLang from './SwitchLang.astro';
 import ThemeSwitcher from './ThemeSwitcher.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
