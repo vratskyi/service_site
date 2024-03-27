@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 import Layout from '../../../layouts/Layout.astro'
+import services from '../../../images/services.png'
 
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
@@ -12,33 +13,43 @@ const t = useTranslations(lang);
     <div class="mx-auto w-full max-w-[1024px]">
     <div class="absolute top-0 left-0 right-0 bottom-0 bg-grid z-[-1]"></div>
 
-    <section class="w-full min-w-full max-w-[1024px] my-[80px] lg:my-[150px] rounded-box p-5 lg:p-20 grid backdrop-blur-3xl overflow-hidden isolate">
+    <section class="w-full min-w-full max-w-[1024px] mt-[80px] lg:mt-[150px] rounded-box p-5 lg:p-20 grid overflow-hidden isolate relative h-svh">
       <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.05]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.07]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
       <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.05]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.07]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
     
       <div class="grid not-prose p-3 lg:p-0">
-        <div class="grid lg:grid-flow-col gap-y-20 lg:gap-y-0 place-content-center place-items-center text-center">
+        <div class="grid lg:grid-flow-col gap-y-20 lg:gap-y-0 place-content-start place-items-center">
           <div>
     
             <div class="grid gap-y-5 lg:gap-y-0">
               <h1 class="text-7xl font-black">
-                <span class="text-gradient-shadow bg-clip-text text-transparent bg-gradient-to-r from-accent via-primary to-secondary glow-gradient-text">
+                <span class="text-gradient-shadow bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-secondary glow-gradient-text">
                   Ваш проект уже ждет
                 </span>
               </h1>
           </div>
-          <div class="mt-10 grid gap-y-5">
-              <p class="prose lg:prose-lg break-words text-balance">
+          <div class="mt-10 grid grid-flow-col gap-y-5">
+            <div class="grid">
+              <p class="prose lg:prose-lg break-words">
                 Мой подход к разработке сайтов не ограничивается простым запуском проекта. 
-                Я стремлюсь к долгосрочному сотрудничеству, ориентированному на успешное развитие вашего бизнеса. 
+                Я стремлюсь к долгосрочному сотрудничеству, ориентированному на успешное развитие вашего бизнеса.
+              </p>
+              <p class="prose lg:prose-lg break-words">
                 Готов начать работу над вашим проектом прямо сейчас и вместе с этим обсудить возможности его расширения и масштабирования 
                 для обеспечения долгосрочного успеха. 
                 Давайте воплотим вашу идею в реальность и сделаем ее готовой к вызовам будущего.
-              </p>
+              </p> 
+              <h3 class="prose-xl font-bold text-secondary">
+                Давайте воплотим вашу идею в реальность и сделаем ее готовой к вызовам будущего.
+              </h3>
+            </div>
+                <div>
+                  <Picture class="w-full h-full max-w-[400px] max-h-[400px] object-cover object-center" src={services} alt="services oleksii vratskyi" formats={['avif', 'webp']} width='400' height='400'>
+                </div>
             </div>
           </div>
         </div>
@@ -46,14 +57,20 @@ const t = useTranslations(lang);
     
     </section>
 
-          <div class="mx-auto max-w-2xl sm:text-center">
-            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-primary">Без подвоха</h2>
-            <p class="mt-6 text-lg leading-8">Цены которые не пугают своими <span class="uppercase font-thin">размерами</span>, </p>
+          <div class="mx-auto max-w-2xl sm:text-center not-prose">
+            <h2 class="text-8xl font-bold tracking-tight text-primary">Без подвоха</h2>
+            <p class="mt-6 text-lg leading-8">Цены которые не пугают своими <span class="uppercase font-thin">размерами</span></p>
           </div>
 
           <div class="mb-10">
             <div class="mx-auto mt-10 p-5 flex-row w-full bg-base-100 rounded-box ring-1 ring-secondary/20 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-              <div class="p-8 sm:p-10 grid grid-flow-row">
+              <div class="p-8 sm:p-10 grid grid-flow-row isolate relative">
+                <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                  <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.07]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+                <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                  <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.07]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
                 <div>
                   <h2 class="text-4xl font-black tracking-tight not-prose">Project <span class="text-secondary">S</span></h2>
                   <p class="mt-6 text-base leading-7">Закажите небольшой проект <a class="link link-primary" href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank">лендинга</a>
@@ -68,7 +85,7 @@ const t = useTranslations(lang);
                     <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                   <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Один вариант дизайн проекта с возможностью внести небольшие правки перед разработкой.">Дизайн проекта *</span>
+                   <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Один вариант дизайн проекта с возможностью внести до 5 небольших правок перед разработкой.">Дизайн проекта *</span>
                   </li>
                   <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -96,7 +113,7 @@ const t = useTranslations(lang);
                     <p class="text-base font-semibold">Плати раз, пользуйся всегда.</p>
                     <p class="mt-6 flex items-baseline justify-center gap-x-2">
                       <div class="text-5xl font-bold tracking-tight">
-                        <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других трат на запуск сайта.">от $150*</span>
+                        <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других затрат на запуск сайта.">от $150*</span>
                         <span class="text-sm font-semibold leading-6 tracking-wide">USD</span>
                       </div>
                     </p>
@@ -152,7 +169,7 @@ const t = useTranslations(lang);
                     <p class="text-base font-semibold">Плати раз, пользуйся всегда.</p>
                     <p class="mt-6 flex items-baseline justify-center gap-x-2">
                       <div class="text-5xl font-bold tracking-tight">
-                        <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других трат на запуск сайта.">от $250*</span>
+                        <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip="Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других затрат на запуск сайта.">от $250*</span>
                         <span class="text-sm font-semibold leading-6 tracking-wide">USD</span>
                       </div>
                     </p>

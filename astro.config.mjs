@@ -23,6 +23,9 @@ export default defineConfig({
       ua: "ru"
     }
   },
+  redirects: {
+    '/': '/ru'
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'viewport'

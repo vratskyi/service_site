@@ -4,9 +4,9 @@ document.addEventListener('astro:page-load', () => {
   const logos = document.querySelectorAll('.logo');
 
   // Установка темы по умолчанию
-  let defaultTheme = 'dracula';
+  let defaultTheme = 'sunset';
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      defaultTheme = 'garden';
+      defaultTheme = 'cupcake';
   }
 
   // Проверка cookies
@@ -16,11 +16,11 @@ document.addEventListener('astro:page-load', () => {
   }
 
   document.documentElement.setAttribute('data-theme', defaultTheme);
-  themeSwitcher.checked = defaultTheme === 'garden';
+  themeSwitcher.checked = defaultTheme === 'cupcake';
 
   // Установка логотипа в зависимости от темы
   logos.forEach(logo => {
-      logo.src = defaultTheme === 'garden' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+      logo.src = defaultTheme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
   });
 
   // Обработчик события для изменения темы при переключении чекбокса
@@ -28,10 +28,10 @@ document.addEventListener('astro:page-load', () => {
       let theme;
       if (event.target.checked) {
           // Если переключатель включен, устанавливаем светлую тему
-          theme = 'garden';
+          theme = 'cupcake';
       } else {
           // Если переключатель выключен, устанавливаем темную тему
-          theme = 'dracula';
+          theme = 'sunset';
       }
 
       // Установка темы и обновление логотипов
@@ -39,7 +39,7 @@ document.addEventListener('astro:page-load', () => {
       document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 
       logos.forEach(logo => {
-          logo.src = theme === 'garden' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+          logo.src = theme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
       });
   });
 });
