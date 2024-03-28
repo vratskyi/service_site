@@ -13,8 +13,9 @@ import { useTranslatedPath } from "../../i18n/utils";
   <ul tabindex="0" id="langSelect" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
     {
       Object.entries(languages).map(([lang, label]) => (
-        <li><a href={useTranslatedPath(lang)('/')} class="stroke-current hover:text-primary duration-150">{label}</a></li>
+        <li><a href={useTranslatedPath(lang as "ua" | "ru")('/')} class="stroke-current hover:text-primary duration-150">{label}</a></li>
       ))
     }
   </ul>
 </div>
+

@@ -3,7 +3,7 @@ export const languages = {
     ru: 'ru Русский',
   };
   
-  export const showDefaultLang = false;
+  export const showDefaultLang = true;
   export const defaultLang = 'ru';
   
   export const routes = {

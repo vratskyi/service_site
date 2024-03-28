@@ -27,7 +27,8 @@ export function useTranslatedPath(lang: keyof typeof ui) {
       return `/${translatedPath}`;
     }
 
-    return `/${l}/${translatedPath}`;
+    // If there is no translation, return the original path
+    return `/${l}/${translatedPath !== pathName ? translatedPath : ''}`;
   }
 }
 
