@@ -13,12 +13,15 @@ const t = useTranslations(lang);
     <a href={`/${lang}/about`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">{t('nav.about')}</a>
       <a href={`/${lang}/portfolio`} class="link link-hover hover:text-primary duration-150">{t('nav.portfolio')}</a>
       <a href={`/${lang}/services`} class="link link-hover hover:text-primary duration-150">{t('nav.services')}</a>
-    </nav> 
-    <nav>
+    </nav>
+    <div>
+      <a class="btn btn-sm btn-outline btn-primary" href="https://donatello.to/vratskyi" target="_blank">{t('footer.donate')}</a>  
+    </div> 
+    <div>
       <div class="grid grid-flow-col gap-4">
         <Socials />
       </div>
-    </nav> 
+    </div> 
     <aside>
       <div set:html={t('footer.copyright')}></div>
       <Logo />
