@@ -6,7 +6,7 @@ document.addEventListener('astro:page-load', () => {
   // Установка темы по умолчанию
   let defaultTheme = 'sunset';
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      defaultTheme = 'cupcake';
+      defaultTheme = 'light';
   }
 
   // Проверка cookies
@@ -16,11 +16,11 @@ document.addEventListener('astro:page-load', () => {
   }
 
   document.documentElement.setAttribute('data-theme', defaultTheme);
-  themeSwitcher.checked = defaultTheme === 'cupcake';
+  themeSwitcher.checked = defaultTheme === 'light';
 
   // Установка логотипа в зависимости от темы
   logos.forEach(logo => {
-      logo.src = defaultTheme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+      logo.src = defaultTheme === 'light' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
   });
 
   // Обработчик события для изменения темы при переключении чекбокса
@@ -28,7 +28,7 @@ document.addEventListener('astro:page-load', () => {
       let theme;
       if (event.target.checked) {
           // Если переключатель включен, устанавливаем светлую тему
-          theme = 'cupcake';
+          theme = 'light';
       } else {
           // Если переключатель выключен, устанавливаем темную тему
           theme = 'sunset';
@@ -39,7 +39,7 @@ document.addEventListener('astro:page-load', () => {
       document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 
       logos.forEach(logo => {
-          logo.src = theme === 'cupcake' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
+          logo.src = theme === 'light' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
       });
   });
 });
