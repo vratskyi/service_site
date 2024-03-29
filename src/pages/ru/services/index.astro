@@ -60,7 +60,7 @@ const t = useTranslations(lang);
           <div class="aspect-[1397/845] w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
         </div>
         <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-          <div class="aspect-[543/845] w-[28.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+          <div class="aspect-[543/845] w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
         </div>
       </div>
       <h3 class="text-base font-semibold leading-7 text-primary">{t('service.screen.2.subTitle')}</h3>
@@ -247,7 +247,7 @@ const t = useTranslations(lang);
                     <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                   <span class="tooltip tooltip-bottom underline decoration-sky-500 underline-offset-4 hover:cursor-pointer" data-tip={t('service.price.card.2.futures.description.1')}>{t('service.price.card.2.futures.title.1')}</span>
+                   <span>{t('service.price.card.2.futures.title.1')}</span>
                   </li>
                   <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -286,6 +286,27 @@ const t = useTranslations(lang);
               </div>
             </div>
           </div>
+
+
+          <section class="grid place-content-center lg:h-svh">
+            <div class="relative isolate">
+              <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                <div class="aspect-[1397/845] w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+              </div>
+              <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                <div class="aspect-[543/945] w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+              </div>
+            </div>
+            <div class="grid place-content-center place-items-center gap-y-5">
+              <h3 class="text-lg tracking-tight text-primary">платите по мере роста проекта</h3>
+              <h2 class="text-7xl font-black tracking-tight not-prose mb-5">Ничего не подошло ?</h2>
+              <p class="text-center max-w-4xl">
+                Специально для вас есть отличное предложение, мы разрабатываем для вас базовую версию проекта, 
+                далее в зависимости от возможностей постепенно добавляем функции. 
+              </p>
+              <a href="#" class="mt-10 btn btn-primary">{t('service.price.card.2.price.button')}</a>
+            </div>
+          </section>
 
 
 </div>

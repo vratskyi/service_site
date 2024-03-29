@@ -188,6 +188,9 @@ export const languages = {
       'service.price.card.2.price.cost.description': 'Цена может отличаться взависимости от сложности проекта.',
     },
     ru: {
+
+        //! Главное меню
+
         'nav.city': 'Киев',
         'nav.lang': 'ru Русский',
         'nav.home': 'Главная',
@@ -199,6 +202,9 @@ export const languages = {
         'nav.hireable.free.description': 'Свободен для сотрудничества, давайте обсудим ваш проект!',
         'nav.hireable.busy': 'Занят',
         'nav.hireable.busy.description': 'Сейчас я занят, но вы можете написать мне.',
+
+        //! Футер
+
         'footer.donate': 'Угостить меня кофем',
         'footer.copyright': 'Авторское право © <span id="currentYear"></span> Все права защищены.',
         'portfolio.subDesc': 'Использованные технологии:',
@@ -251,6 +257,9 @@ export const languages = {
         'mygithub.joke': '- Почему функции не ходят в театр? Потому что им всегда не хватает аргументов.',
         'cta.title': 'Мой код. Мои правила. Мои баги.',
         'cta.joke': 'Как программисты говорят друг другу пока ? <code> return 0;</code>',
+
+        //! Страница ПОРТФОЛИО 
+
         'portfolio.main.title': 'Последний проект',
         'portfolio.main.title.label': 'новый',
         'portfolio.main.description': 'Сайт для доставки воды по Белогородке и соседних районах обновлен с привлекательным дизайном, удобным заказом и интеграцией аналитики для вовлечения клиентов.',
@@ -305,6 +314,9 @@ export const languages = {
         'portfolio.card.5.futures.1': 'Адаптивный',
         'portfolio.card.5.futures.2': 'Оптимизированный',
         'portfolio.card.5.futures.3': 'Функциональный',
+
+        //! Страница СЕРВИСЫ 
+
         'service.hero.title': 'Ваш проект уже ждет',
         'service.hero.description': 'Мой подход к разработке сайтов не ограничивается простым запуском проекта. Я стремлюсь к долгосрочному сотрудничеству, ориентированному на успешное развитие вашего бизнеса.',
         'service.hero.subDescription': 'Готов начать работу над вашим проектом прямо сейчас и вместе с этим обсудить возможности его расширения и масштабирования для обеспечения долгосрочного успеха. Давайте воплотим вашу идею в реальность и сделаем ее готовой к вызовам будущего.',
@@ -312,6 +324,9 @@ export const languages = {
         'service.screen.2.subTitle': 'Не беспокойнеть о мелочах',
         'service.screen.2.title': 'Забудьте о технических терминах, просто скажите что вы хотите',
         'service.screen.2.description': 'Сосредоточьтесь не на том как, а на том что вы хотите, расскажите о своей идее в деталях и я помогу вам развить ее, возможно у вас уже есть готовый бизнес и вы бы хотели привлечь больше клиентов или обновить дизайн, уверен мы сможем воплотить Ваши задумки в жизнь.',
+        
+        //* Блок "что вы получите"
+        
         'service.screen.3.title': 'Что Вы получите работая со мной',
         'service.screen.3.card.1.title': 'Творческий подход',
         'service.screen.3.card.1.description': 'Подход к каждому проекту с творческим взглядом, стремясь создать уникальный и запоминающийся веб-сайт, который отражает вашу уникальность и привлекает внимание вашей аудитории.',
@@ -321,9 +336,15 @@ export const languages = {
         'service.screen.3.card.3.description': 'Я уделяю внимание потребностям каждого клиента и работаю в тесном взаимодействии с ним, чтобы создать веб-сайт, который идеально соответствует их бизнес-целям и пожеланиям. Мой подход ориентирован на удовлетворение ваших потребностей и достижение вашего успеха.',
         'service.screen.3.card.4.title': 'Техническая поддержка и обслуживание',
         'service.screen.3.card.4.description': 'После запуска сайта я предоставлю вам полную техническую поддержку и обучение по управлению сайтом, чтобы вы могли легко управлять и обновлять его содержимое. Я также обеспечиваю регулярное обслуживание и обновление сайта, чтобы он всегда оставался актуальным и безопасным для ваших пользователей.',
+        
+        //* Блок с услугами и ценой
+        
         'service.price.title': 'Прозрачнее чем когда либо',
         'service.price.subTitle': 'Цены которые не пугают своими <span class="uppercase font-black">размерами,</span> заказывая услугу вы автоматически соглашаетесь с условиями <a class="link link-primary" href="#">сотрудничества.</a>',
-        'service.price.card.1.title': 'Project <span class="text-secondary">S</span>',
+        
+        //* Первая карточка услуг
+        
+        'service.price.card.1.title': 'Project <span class="text-secondary">Mini</span>',
         'service.price.card.1.description': 'Закажите небольшой проект <a class="link link-primary" href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank">лендинга</a> и продайте ваш товар, расскажите о себе или спросите потенциальных клиентов чего они хотят?',
         'service.price.card.1.futures.title': 'Что входит в этот пакет',
         'service.price.card.1.futures.title.1': 'Дизайн проекта *',
@@ -335,24 +356,26 @@ export const languages = {
         'service.price.card.1.futures.title.4': 'Интеграция аналитики *',
         'service.price.card.1.futures.description.4': 'Интеграция аналитики, такой как: Google, Bing, Facebook или другие на ваш выбор.',
         'service.price.card.1.beforePrice': 'Плати раз, пользуйся всегда.',
-        'service.price.card.1.price': 'от $150*',
+        'service.price.card.1.price': 'от $250 *',
         'service.price.card.1.price.description': 'Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других затрат на запуск сайта.',
         'service.price.card.1.price.currency': 'USD',
         'service.price.card.1.price.button': 'Обсудить проект',
         'service.price.card.1.price.cost.description': 'Цена может отличаться взависимости от сложности проекта.',
-        'service.price.card.2.title': 'Project <span class="text-primary">L</span>',
+        
+        //* Вторая карточка услуг
+
+        'service.price.card.2.title': 'Project <span class="text-primary">Pro</span>',
         'service.price.card.2.description': 'Этот пакет подойдет для начального бизнес сайта/стартапа, расскажите о своей компании, предоставьте услуги, продавайте товары, интеграция с системами аналитики и удобный интерфейс администратора позволит вам сосредоточить усилия на продажах.',
         'service.price.card.2.futures.title': 'Что входит в этот пакет',
-        'service.price.card.2.futures.title.1': 'Дизайн проекта *',
-        'service.price.card.2.futures.description.1': 'Один вариант дизайн проекта с возможностью внести до 5 небольших правок перед разработкой.',
-        'service.price.card.2.futures.title.2': 'Разработка проекта *',
-        'service.price.card.2.futures.description.2': 'Проект разрабатывается на технологиях Node.js, JavaScript, Astro, Tailwind CSS и других.',
+        'service.price.card.2.futures.title.1': 'Все что в пакете Project Mini',
+        'service.price.card.2.futures.title.2': 'Интеграция с CMS *',
+        'service.price.card.2.futures.description.2': 'Интеграция с Contentful Hedless CMS',
         'service.price.card.2.futures.title.3': 'Бесплатная пробная поддержка *',
         'service.price.card.2.futures.description.3': 'Если вы заказываете у меня проект первый раз, я предоставлю вам бесплатную поддержку вашего проекта на 2 недели, сюда входит: обслуживание сайта, обновление данных, правки, предложения по улучшению проекта. Сюда не входит улучшение функционала или добавление нового.',
         'service.price.card.2.futures.title.4': 'Интеграция аналитики *',
         'service.price.card.2.futures.description.4': 'Интеграция аналитики, такой как: Google, Bing, Facebook или другие на ваш выбор.',
         'service.price.card.2.beforePrice': 'Плати раз, пользуйся всегда.',
-        'service.price.card.2.price': 'от $250*',
+        'service.price.card.2.price': 'от $600 *',
         'service.price.card.2.price.description': 'Цена указана только за работу и не учитывает стоимость услуг хостинг провайдера домена и других затрат на запуск сайта.',
         'service.price.card.2.price.currency': 'USD',
         'service.price.card.2.price.button': 'Обсудить проект',
