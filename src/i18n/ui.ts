@@ -340,7 +340,7 @@ export const languages = {
         //* Блок с услугами и ценой
         
         'service.price.title': 'Прозрачнее чем когда либо',
-        'service.price.subTitle': 'Цены которые не пугают своими <span class="uppercase font-black">размерами,</span> заказывая услугу вы автоматически соглашаетесь с условиями <a class="link link-primary" href="#">сотрудничества.</a>',
+        'service.price.subTitle': 'Понятная ценовая политика без скрытых платежей, заказывая услугу вы автоматически соглашаетесь с условиями <a class="link link-primary" href="#">сотрудничества.</a>',
         
         //* Первая карточка услуг
         
@@ -370,8 +370,8 @@ export const languages = {
         'service.price.card.2.futures.title.1': 'Все что в пакете Project Mini',
         'service.price.card.2.futures.title.2': 'Интеграция с CMS *',
         'service.price.card.2.futures.description.2': 'Интеграция с Contentful Hedless CMS',
-        'service.price.card.2.futures.title.3': 'Бесплатная пробная поддержка *',
-        'service.price.card.2.futures.description.3': 'Если вы заказываете у меня проект первый раз, я предоставлю вам бесплатную поддержку вашего проекта на 2 недели, сюда входит: обслуживание сайта, обновление данных, правки, предложения по улучшению проекта. Сюда не входит улучшение функционала или добавление нового.',
+        'service.price.card.2.futures.title.3': 'Расширенная поддержка *',
+        'service.price.card.2.futures.description.3': 'Бесплатныя поддержка на период 2 недель после запуска проекта с обучением вашего персонала редактировать контент, так-же в стоимость входит мелкие изменения в функционале и визуальной части сайта.',
         'service.price.card.2.futures.title.4': 'Интеграция аналитики *',
         'service.price.card.2.futures.description.4': 'Интеграция аналитики, такой как: Google, Bing, Facebook или другие на ваш выбор.',
         'service.price.card.2.beforePrice': 'Плати раз, пользуйся всегда.',
