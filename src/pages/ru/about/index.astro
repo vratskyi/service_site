@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.about')}>
+<Layout title=`${t('nav.about')} - VRATSKYI`>
 
     <div class="mx-auto w-full max-w-[1024px] my-[80px]">
         <About />

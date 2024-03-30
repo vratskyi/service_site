@@ -14,7 +14,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.portfolio')}>
+<Layout title=`${t('nav.portfolio')} - VRATSKYI`>
 
       
     <div class="relative overflow-hidden w-full h-full">
@@ -157,7 +157,7 @@ const t = useTranslations(lang);
        <PortfolioCard 
        image={{
           src: vratskyiBlog,
-          alt: `${t('portfolio.card.1.title')}`,
+          alt: `${t('portfolio.card.2.title')}`,
        }},
        label={t('portfolio.card.2.label')}
        title={t('portfolio.card.2.title')}
