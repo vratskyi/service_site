@@ -1,23 +1,47 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
-module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+export default {
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
-		extend: {
-			fontFamily: {
-				'sans-serif': [("Overpass", "sans-serif")],
-			  },
-			}
+	  extend: {
+		fontFamily: {
+		  sans: ["Switzer", "sans-serif"],
 		},
-	plugins: [ require('autoprefixer'), require('postcss'), require('cssnano'), require("@tailwindcss/typography"), require("daisyui") ],
-	daisyui: {
-		themes: ["sunset", "light"], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "light"]
-		darkTheme: "sunset", // name of one of the included themes for dark mode
-		base: true, // applies background color and foreground color for root element by default
-		styled: true, // include daisyUI colors and design decisions for all components
-		utils: true, // adds responsive and modifier utility classes
-		prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-		logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-		themeRoot: ":root", // The element that receives theme color CSS variables
 	  },
-}
+	},
+	plugins: [
+	  require("autoprefixer"),
+	  require("postcss"),
+	  require("cssnano"),
+	  require("@tailwindcss/typography"),
+	  require("daisyui"),
+	],
+	daisyui: {
+	  themes: [
+		{
+		  codeForgeBlack: {
+			...require("daisyui/src/theming/themes").sunset,
+			primary: "#FF865B",
+			secondary: "#FD6F9C",
+			accent: "#A57EE8",
+			success: "#ADDFAD",
+		  },
+		  codeForgeLight: {
+			...require("daisyui/src/theming/themes").light,
+			primary: "#FF865B",
+			secondary: "#FD6F9C",
+			accent: "#A57EE8",
+			success: "#ADDFAD",
+		  },
+		},
+	  ],
+	  darkTheme: 'codeForgeBlack',
+	  lightTheme: 'codeForgeLight',
+	  base: true,
+	  styled: true,
+	  utils: true,
+	  prefix: "",
+	  logs: true,
+	  themeRoot: ":root",
+	},
+  };
+  
