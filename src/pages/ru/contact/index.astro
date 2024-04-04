@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro'
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
-import About from '../../../components/About.astro';
+import ContactForm from '../../../components/ContactForm.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,8 +9,14 @@ const t = useTranslations(lang);
 
 <Layout title=`${t('nav.contact')} - VRATSKYI`>
 
-    <div class="mx-auto w-full max-w-[1024px] my-[80px]">
+    <section class="mx-auto w-full max-w-[800px] my-[200px] lg:min-h-svh">
+        <div class="mx-auto w-full max-w-2xl">
+            <h1>Связаться со мной</h1>
+            <p>Расскажите о сновоем проекте вкратце, чего бы вы хотели и чего ожидаете, так я смогу дать более четкий ответ.</p>
+        </div>
 
-    </div>
+        <ContactForm />
+
+    </section>
     
 </Layout>
