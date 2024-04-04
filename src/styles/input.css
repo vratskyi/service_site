@@ -67,8 +67,3 @@ a {
   background-image: radial-gradient(var(--fallback-a, oklch(var(--a) / 0.3)), 1px, transparent 1px);
   background-size: 120px 120px;
 }
-
-.bg-grid {
-  background-image: linear-gradient(var(--fallback-s, oklch(var(--s) / 0.04)) 1px, transparent 1px), linear-gradient(to right, var(--fallback-bc, oklch(var(--bc) / 0.03)) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
