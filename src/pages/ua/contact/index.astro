@@ -1,0 +1,27 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import ContactForm from "../../../components/ContactForm.astro";
+import Socials from "../../../components/Socials.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title=`${t('nav.contact')} - VRATSKYI`>
+  <section class="mx-auto w-full max-w-[800px] my-[200px]">
+    <div class="mx-auto w-full max-w-2xl">
+      <h1>Зв'язатися зі мною</h1>
+      <p>
+        Розкажіть про свій проєкт коротко, що б ви хотіли і що очікуєте,
+        так-же за можливості надайте посилання на ваш проєкт, так я зможу дати
+        більш чітку відповідь.
+      </p>
+     <div class="flex items-center">Я в соціальних сетях: <div class="ml-5 bg-base-300 rounded-box"><Socials /></div></div> 
+    </div>
+    <div class="w-full max-w-md mx-auto">
+        <div class="divider mt-10"></div>
+      </div>
+    <ContactForm />
+  </section>
+</Layout>
