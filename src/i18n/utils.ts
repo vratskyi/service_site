@@ -32,6 +32,17 @@ export function useTranslatedPath(lang: keyof typeof ui) {
   }
 }
 
+export function getBrowserLanguage(req) {
+  const acceptLanguage = req.headers['accept-language'];
+  if (acceptLanguage) {
+    // Разбиваем список предпочитаемых языков, чтобы получить наиболее предпочитаемый язык
+    const languages = acceptLanguage.split(',');
+    return languages[0];
+  }
+  // Если заголовок не указан, возвращаем язык по умолчанию
+  return defaultLang;
+}
+
 export function getRouteFromUrl(url: URL): string | undefined {
   const pathname = new URL(url).pathname;
   const parts = pathname?.split('/');

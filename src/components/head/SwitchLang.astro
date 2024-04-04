@@ -19,3 +19,24 @@ import { useTranslatedPath } from "../../i18n/utils";
   </ul>
 </div>
 
+<script type="text/javascript" transition:persist data-astro-rerun is:inline>
+
+function getBrowserLanguage() {
+    const language = navigator.language || navigator.userLanguage;
+    return language.substr(0, 2); // Возвращает первые два символа, например, "en" для "en-US"
+  }
+
+  // Установка языка браузера в качестве языка по умолчанию
+  document.addEventListener("astro:page-load", function() {
+    const langSelect = document.getElementById("langSelect");
+    const browserLanguage = getBrowserLanguage();
+
+    // Проверяем, существует ли язык браузера в списке доступных языков
+    if (languages.hasOwnProperty(browserLanguage)) {
+      const defaultLangLink = langSelect.querySelector(`a[href='${useTranslatedPath(browserLanguage)('/')}']`);
+      if (defaultLangLink) {
+        defaultLangLink.classList.add("font-bold"); // Подсвечиваем выбранный язык
+      }
+    }
+  });
+</script>
