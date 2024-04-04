@@ -17,17 +17,23 @@
         <div class="grid grid-flow-col place-content-center gap-x-2">
             <label class="input input-bordered flex items-center gap-2">
                 Имя
-                <input type="text" class="grow" value="" placeholder="Daisy" />
+                <input type="text" autocomplete="name" class="grow hover:cursor-text" value="" placeholder="Oleksii" required />
               </label>
               <label class="input input-bordered flex items-center gap-2">
                 Email
-                <input type="text" class="grow" value="" placeholder="daisy@site.com" />
+                <input type="email" autocomplete="email" class="grow hover:cursor-text" value="" placeholder="example@gmail.com" required />
               </label>
             </div>
-                <textarea id="contactText" value="" maxlength="600" placeholder="Расскажите о своем проекте" class="textarea textarea-bordered textarea-lg w-full max-w-full placeholder:text-sm" ></textarea>
+            <label class="input input-bordered flex items-center gap-2">
+                Ваш сайт
+                <input type="text" autocomplete="name" class="grow hover:cursor-text" value="" placeholder="example.com" />
+              </label>
+                <textarea id="contactText" value="" maxlength="900" placeholder="Расскажите о своем проекте" required class="textarea textarea-bordered textarea-lg w-full max-w-full placeholder:text-sm hover:cursor-text" ></textarea>
                 <div class="label justify-end">
-                    <span id="contactTextCounter" class="label-text-alt">0/600</span>
+                    <span id="contactTextCounter" class="label-text-alt">0/900</span>
                   </div>
+                  <span class="label-text-alt">Отправляя форму вы соглашаетесь на обработку ваших <a href="#" class="link link-primary">персональных данных.</a></span>
+                  <button class="btn btn-sm btn-primary place-self-start">Отправить</button>
         </form>
 </div>
 
@@ -43,14 +49,14 @@
 
             // Если поле ввода пустое, счетчик устанавливается в 0
             if (count === 0) {
-                counter.textContent = '0/600';
+                counter.textContent = '0/900';
                 return; // Выходим из функции, чтобы не выполнять лишний код
             }
 
-            // Ограничиваем максимальное количество символов до 600
-            if (count > 600) {
-                contactText.value = contactText.value.slice(0, 600); // Обрезаем текст до 600 символов
-                count = 600; // Устанавливаем счетчик в 600
+            // Ограничиваем максимальное количество символов до 900
+            if (count > 900) {
+                contactText.value = contactText.value.slice(0, 900); // Обрезаем текст до 900 символов
+                count = 900; // Устанавливаем счетчик в 900
             }
 
             // Если пользователь удаляет текст, уменьшаем счетчик
@@ -59,7 +65,7 @@
             }
 
             // Обновляем значение счетчика
-            counter.textContent = `${count}/600`;
+            counter.textContent = `${count}/900`;
         });
 
     });
