@@ -1,9 +1,16 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div class="mt-5 grid place-content-center">
     
     <form method="POST" class="grid place-content-center mt-10 gap-y-5">
         <div class="grid grid-flow-col place-content-center gap-x-2">
             <label class="input input-bordered flex items-center gap-2">
-                Имя
+              {t('contact.form.name')}
                 <input type="text" autocomplete="name" class="grow hover:cursor-text" value="" placeholder="Oleksii" required />
               </label>
               <label class="input input-bordered flex items-center gap-2">
@@ -12,32 +19,24 @@
               </label>
             </div>
             <label class="input input-bordered flex items-center gap-2">
-                Ваш сайт
+              {t('contact.form.site')}
                 <input type="text" autocomplete="name" class="grow hover:cursor-text" value="" placeholder="example.com" />
               </label>
-                <textarea id="contactText" value="" maxlength="900" placeholder="Расскажите о своем проекте" required class="textarea textarea-bordered textarea-lg w-full max-w-full placeholder:text-sm hover:cursor-text" ></textarea>
+                <textarea id="contactText" value="" maxlength="900" placeholder={t('contact.form.textarea')} required class="textarea textarea-bordered textarea-lg w-full max-w-full placeholder:text-sm hover:cursor-text" ></textarea>
                 <div class="label justify-end">
                     <span id="contactTextCounter" class="label-text-alt">0/900</span>
                   </div>
-                  <span class="label-text-alt">Отправляя форму вы соглашаетесь на обработку ваших 
-                    <button class="link link-primary no-underline" onclick="my_modal_3.showModal()">персональных данных.</button>
-                    
-                </span>
-                
-                
-                <button class="btn btn-sm btn-primary place-self-start">Отправить</button>
-            </form>
+                  
+                  <button class="btn btn-sm btn-primary place-self-start">{t('contact.form.button.submit')}</button>
+                </form>
+                <div class="label-text-alt mt-10" set:html={t('contact.form.processing')}></div>
             <dialog id="my_modal_3" class="modal">
               <div class="modal-box">
                 <form method="dialog">
                   <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <h3 class="font-bold text-lg">Мы уважаем вашу конфиденциальность.</h3>
-                <p class="py-4">
-                    При отправке формы на нашем сайте вы соглашаетесь на обработку ваших 
-                    персональных данных в соответствии с нашей 
-                    <a class="link link-primary" href="#">политикой конфиденциальности.</a>
-                </p>
+                <h3 class="font-bold text-lg">{t('contact.modal.title')}</h3>
+                <p class="py-4" set:html={t('contact.modal.description')}></p>
               </div>
             </dialog>
 </div>

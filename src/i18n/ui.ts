@@ -31,7 +31,7 @@ export const languages = {
       'nav.hireable.busy': 'Зайнятий',
       'nav.hireable.busy.description': 'Зараз я зайнятий, але ви можете написати мені.',
       'footer.donate': 'Пригостити мене кавою',
-      'footer.copyright': 'Авторське право © <span id="currentYear"></span> Всі права захищені.',
+      'footer.copyright': '© <span id="currentYear"></span> Олексій Врацький. Всі права захищені.',
       'portfolio.subDesc': 'Використані технології:',
       'portfolio.externalButton': 'Дивитися',
       'hero.title': 'Олексій Врацький',
@@ -240,6 +240,17 @@ export const languages = {
 
       'service.price.tab.1': 'Розробка сайту з нуля',
       'service.price.tab.2': 'Розробка telegram-ботів',
+
+
+      
+      'contact.form.name': 'Ім\'я',
+      'contact.form.site': 'Ваш сайт',
+      'contact.form.textarea': 'Розкажіть про свій проект',
+      'contact.form.processing': 'Відправляючи форму ви погоджуєтеся на обробку ваших <button class="link link-primary no-underline" onclick="my_modal_3.showModal()">персональних даних.</button>',
+      'contact.form.button.submit': 'Відправити',
+      
+      'contact.modal.title': 'Ми поважаємо вашу конфіденційність.',
+      'contact.modal.description': 'Відправляючи форму на нашому сайті, ви погоджуєтеся на обробку ваших персональних даних відповідно до нашої <a class="link link-primary" href="#">політики конфіденційності.</a>',
     },
     ru: {
         'nav.city': 'Киев',
@@ -256,7 +267,7 @@ export const languages = {
         'nav.hireable.busy': 'Занят',
         'nav.hireable.busy.description': 'Сейчас я занят, но вы можете написать мне.',
         'footer.donate': 'Угостить меня кофем',
-        'footer.copyright': 'Авторское право © <span id="currentYear"></span> Все права защищены.',
+        'footer.copyright': '© <span id="currentYear"></span> Алексей Врацкий. Все права защищены.',
         'portfolio.subDesc': 'Использованные технологии:',
         'portfolio.externalButton': 'Смотреть',
         'hero.title': 'Алексей Врацкий',
@@ -471,5 +482,15 @@ export const languages = {
 
         'service.price.tab.1': 'Разработка сайта с нуля',
         'service.price.tab.2': 'Разработка telegram ботов',
+
+
+        'contact.form.name': 'Имя',
+        'contact.form.site': 'Ваш сайт',
+        'contact.form.textarea': 'Расскажите о своем проекте',
+        'contact.form.processing': 'Отправляя форму вы соглашаетесь на обработку ваших <button class="link link-primary no-underline" onclick="my_modal_3.showModal()">персональных данных.</button>',
+        'contact.form.button.submit': 'Отправить',
+        
+        'contact.modal.title': 'Мы уважаем вашу конфиденциальность.',
+        'contact.modal.description': 'При отправке формы на нашем сайте вы соглашаетесь на обработку ваших персональных данных в соответствии с нашей <a class="link link-primary" href="#">политикой конфиденциальности.</a>',
       },
   } as const;
