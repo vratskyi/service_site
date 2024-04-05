@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="footer footer-center py-20 px-10 bg-base-300/10 backdrop-blur-3xl text-base-content rounded z-20 -mt-10">
+<footer class="footer footer-center py-20 px-10 bg-base-300/10 backdrop-blur-3xl text-base-content z-20 -mt-10">
     <nav class="grid grid-flow-col gap-4">
       <a href={`/${lang}/portfolio`} class="link link-hover hover:text-primary duration-150">{t('nav.portfolio')}</a>
       <a href={`/${lang}/services`} class="link link-hover hover:text-primary duration-150">{t('nav.services')}</a>
