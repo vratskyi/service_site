@@ -9,20 +9,20 @@ const t = useTranslations(lang);
 ---
 
 <Layout title=`${t('nav.contact')} - VRATSKYI`>
-  <section class="mx-auto w-full max-w-[800px] my-[200px]">
-    <div class="mx-auto w-full max-w-2xl">
+  <section class="mx-auto w-full max-w-[800px] my-[80px] md:my-[200px]">
+    <div class="mx-auto w-full max-w-2xl p-5">
       <h1>Связаться со мной</h1>
       <p>
         Расскажите о своем проекте вкратце, что бы вы хотели и что ожидаете,
         так-же по возможности предоставте ссылку на ваш проект, так я смогу дать
         более четкий ответ.
       </p>
-     <div class="flex items-center">Я в социальных сетях: <div class="ml-5 bg-base-300 rounded-box"><Socials /></div></div> 
+     <div class="flex flex-col lg:flex-row items-center">Я в социальных сетях: <div class="ml-5 bg-base-300 rounded-box"><Socials /></div></div> 
     </div>
     <div class="w-full max-w-md mx-auto">
         <div class="divider mt-10"></div>
       </div>
     <ContactForm />
-    <div class="label-text-alt mt-10 w-full max-w-lg mx-auto">Отправляя заявку вы соглашаетесь с нашей <a class="link link-primary" href={`/${lang}/privacy-policy`}>политикой конфеденциальности.</a></div>
+    <div class="label-text-alt mt-10 w-full max-w-xs md:max-w-lg mx-auto">Отправляя заявку вы соглашаетесь с нашей <a class="link link-primary" href={`/${lang}/privacy-policy`}>политикой конфеденциальности.</a></div>
   </section>
 </Layout>

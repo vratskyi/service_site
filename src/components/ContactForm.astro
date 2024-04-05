@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 <div class="mt-5 grid place-content-center">
     
                 <form id="my-form" action="https://formspree.io/f/xbjnprpp" method="POST" class="grid place-content-center mt-10 gap-y-5">
-                  <div class="grid grid-flow-col place-content-center gap-x-2">
+                  <div class="grid md:grid-flow-col place-content-center gap-y-2 md:gap-x-2 w-full">
                       <label class="input input-bordered flex items-center gap-2">
                           {t('contact.form.name')}
                           <input type="text" name="name" maxlength="20" autocomplete="name" class="grow hover:cursor-text" value="" placeholder="Oleksii" required />
