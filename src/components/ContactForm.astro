@@ -33,18 +33,6 @@ const t = useTranslations(lang);
                       <p id="my-form-status" class="prose"></p>
                   </div>
               </form>
-
-
-                <div class="label-text-alt mt-10" set:html={t('contact.form.processing')}></div>
-            <dialog id="my_modal_3" class="modal">
-              <div class="modal-box">
-                <form method="dialog">
-                  <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                </form>
-                <h3 class="font-bold text-lg">{t('contact.modal.title')}</h3>
-                <p class="py-4" set:html={t('contact.modal.description')}></p>
-              </div>
-            </dialog>
 </div>
 
 <script type="text/javascript" transition:persist data-astro-rerun is:inline>
