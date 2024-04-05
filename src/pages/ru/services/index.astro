@@ -23,7 +23,7 @@ const t = useTranslations(lang);
                 </span>
               </h1>
           </div>
-          <div class="mt-10 grid grid-flow-col gap-y-5">
+          <div class="mt-10 grid md:grid-flow-col gap-y-5">
             <div class="grid">
               <p class="prose lg:prose-lg break-words">
                 {t('service.hero.description')}
@@ -35,7 +35,7 @@ const t = useTranslations(lang);
                 {t('service.hero.afterDescription')}
               </h3>
             </div>
-                <div>
+                <div class="order-first md:order-last">
                   <Picture class="w-full h-full max-w-[400px] max-h-[400px] object-cover object-center" src={services} alt="services oleksii vratskyi" formats={['avif', 'webp']} width='400' height='400'>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const t = useTranslations(lang);
     
     </section>
 
-    <div class="mx-auto not-prose lg:h-svh text-center grid place-content-center place-items-center">
+    <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
       <div class="relative isolate">
         <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
           <div class="aspect-[1397/845] w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
@@ -55,13 +55,13 @@ const t = useTranslations(lang);
         </div>
       </div>
       <h3 class="text-base font-semibold leading-7 text-primary animate">{t('service.screen.2.subTitle')}</h3>
-      <h2 class="mt-2 text-6xl font-bold tracking-tight animate">{t('service.screen.2.title')}</h2>
+      <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">{t('service.screen.2.title')}</h2>
       <p class="mt-6 text-lg leading-8 animate">
         {t('service.screen.2.description')}
       </p>
     </div>
 
-    <div class="py-24 sm:py-32 lg:h-svh grid place-content-center place-items-center">
+    <div class="py-24 sm:py-32 mt-40 p-2 lg:mt-0 lg:h-svh grid place-content-center place-items-center">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto mt-16 sm:mt-20 lg:mt-24">
           <div class="text-center mb-24">
@@ -129,7 +129,7 @@ const t = useTranslations(lang);
     
 
 
-          <div class="mx-auto sm:text-center not-prose mt-44">
+          <div class="mx-auto sm:text-center not-prose mt-44 p-5">
             <h2 class="text-6xl font-black tracking-tight text-primary animate">{t('service.price.title')}</h2>
             <p class="mt-6 text-lg leading-8 flex flex-col-reverse w-full animate" set:html={t('service.price.subTitle')}> <a class="link link-primary" href={`/${lang}/terms`}>{t('service.price.subTitle.link')}</a></p>
           </div>
@@ -140,7 +140,7 @@ const t = useTranslations(lang);
 
               <div role="tabpanel" class="tab-content p-10">
                 <div class="mb-24">
-                  <div class="mx-auto mt-10 p-5 flex-row w-full rounded-box sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+                  <div class="mx-auto mt-10 p-5 flex-row w-96 rounded-box sm:mt-20 lg:mx-0 lg:flex lg:w-full">
                     <div class="p-8 sm:p-10 grid grid-flow-row isolate relative overflow-hidden rounded-box">
                       <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
                         <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.07]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -430,7 +430,7 @@ const t = useTranslations(lang);
 
 
 
-          <section class="grid place-content-center lg:h-svh">
+          <section class="grid place-content-center my-40 p-2 lg:mt-0 lg:h-svh">
             <div class="relative isolate">
               <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
                 <div class="aspect-[1397/845] w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
