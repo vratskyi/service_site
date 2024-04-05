@@ -1,24 +1,17 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../../../layouts/Layout.astro'
-import h2ovodaOld from '../../../images/water-website.png'
+import vratskyiBlog from '../../../images/ov-main.png'
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title='VRATSKYI - h2ovoda'>
+<Layout title='VRATSKYI - vratskyi-blog'>
 
       
-    <div class="relative overflow-hidden w-full h-full">
-        <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-          <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-
+    <div class="h-full mb-[400px]">
           <div class="grid place-content-start place-self-start mt-[80px] w-full max-w-[1280px] mx-auto">
               <div class="text-sm breadcrumbs">
                   <ul>
@@ -50,26 +43,26 @@ const t = useTranslations(lang);
                             <path stroke-linecap="round" d="M8 11v2m8-2v2" />
                         </g>
                     </svg>
-                      h2ovoda
+                    vratskyi-blog
               </li>
                   </ul>
                 </div>
           </div>
 
           <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start mt-[60px] lg:mt-[80px] p-5 md:p-0">
-            <div class="p-5">
-                <h1 class="relative">{t('portfolio.card.3.title')}
+            <div class="p-5 w-full max-w-md md:max-w-full h-full">
+                <h1 class="relative">{t('portfolio.card.2.title')}
             </h1>
-            <p class="prose" set:html={t('portfolio.card.3.page.description')}></p>
-            <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start mt-10 bg-base-200/20 backdrop-blur-3xl rounded-box p-5 lg:p-10">
-                <div class="grid place-items-center">
+            <p class="prose" set:html={t('portfolio.card.2.page.description')}></p>
+            <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start w-full overflow-x-auto snap-x snap-mandatory mt-10 bg-base-200/20 backdrop-blur-3xl rounded-box p-5 lg:p-10">
+                <div class="grid place-items-center scroll-ml-5 snap-center ml-40 md:ml-0">
                   <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2m-4 0h4m-4 0v1m4-1v1m0 0a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v0m4 0h-4m2 10.008" />
                   </svg>
-                    <p class="text-xs">{t('portfolio.card.3.futures.1')}</p>
+                    <p class="text-xs">{t('portfolio.card.2.futures.1')}</p>
                 </div>
                 <div class="divider divider-horizontal"></div>
-                <div class="grid place-items-center">
+                <div class="grid place-items-center scroll-ml-5 snap-center">
                     <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <mask id="lineMdSpeedLoop0">
                           <path fill="none" stroke="#fff" stroke-dasharray="56" stroke-dashoffset="56" stroke-linecap="round" stroke-width="1.5" d="M5 19V19C4.69726 19 4.41165 18.8506 4.25702 18.5904C3.45852 17.2464 3 15.6767 3 14C3 9.02944 7.02944 5 12 5C16.9706 5 21 9.02944 21 14C21 15.6767 20.5415 17.2464 19.743 18.5904C19.5884 18.8506 19.3027 19 19 19z">
@@ -88,20 +81,20 @@ const t = useTranslations(lang);
                         </mask>
                         <rect width="24" height="24" fill="currentColor" mask="url(#lineMdSpeedLoop0)" />
                       </svg>
-                    <p class="text-xs">{t('portfolio.card.3.futures.2')}</p>
+                    <p class="text-xs">{t('portfolio.card.2.futures.2')}</p>
                 </div>
                 <div class="divider divider-horizontal"></div>
                 <div class="grid place-items-center">
                     <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15">
                         <path fill="currentColor" fill-rule="evenodd" d="M3.88 1h7.24c.403 0 .735 0 1.006.022c.281.023.54.072.782.196a2 2 0 0 1 .874.874c.124.243.173.501.196.782c.022.27.022.603.022 1.005v7.241c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H3.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C1 11.856 1 11.523 1 11.12V3.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C3.144 1 3.477 1 3.88 1m-.924 1.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C2 3.18 2 3.472 2 3.9V7h5V2H3.9c-.428 0-.72 0-.944.019M7 8H2v3.1c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019H7zm1 0h5v3.1c0 .428 0 .72-.019.944c-.018.22-.05.332-.09.41a1 1 0 0 1-.437.437c-.078.04-.19.072-.41.09c-.225.019-.516.019-.944.019H8zm5-1H8V2h3.1c.428 0 .72 0 .944.019c.22.018.332.05.41.09a1 1 0 0 1 .437.437c.04.078.072.19.09.41c.019.225.019.516.019.944z" clip-rule="evenodd" />
                     </svg>
-                    <p class="text-xs">{t('portfolio.card.3.futures.3')}</p>
+                    <p class="text-xs">{t('portfolio.card.2.futures.3')}</p>
                 </div>
             </div>
-            <div class="grid grid-flow-col gap-x-10 place-content-center place-items-center mt-10">
+            <div class="grid grid-flow-col gap-x-10 place-content-center place-items-center mt-5 md:mt-10">
               <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
                 <path fill="url(#vscodeIconsFileTypeAstro0)" d="M11.025 20.499c-.532 1.75-.154 4.184 1.105 5.331v-.042l.042-.112c.154-.741.756-1.203 1.526-1.175c.713.014 1.12.392 1.217 1.217c.042.308.042.616.056.938v.098c0 .7.196 1.371.588 1.959c.35.56.84.993 1.497 1.287l-.028-.056l-.028-.112c-.49-1.469-.14-2.49 1.147-3.358l.392-.266l.868-.573a4.254 4.254 0 0 0 1.791-3.037c.07-.532 0-1.05-.154-1.553l-.21.14c-1.945 1.035-4.17 1.4-6.325.98c-1.301-.197-2.56-.56-3.498-1.652z" />
-                <path fill="#fff" d="M4.925 20.191s3.736-1.82 7.486-1.82l2.84-8.759c.098-.42.406-.7.756-.7s.644.28.756.714l2.826 8.746c4.45 0 7.487 1.82 7.487 1.82L20.709 2.84c-.168-.518-.49-.84-.896-.84h-7.612c-.406 0-.7.322-.896.84z" />
+                <path fill="currentColor" d="M4.925 20.191s3.736-1.82 7.486-1.82l2.84-8.759c.098-.42.406-.7.756-.7s.644.28.756.714l2.826 8.746c4.45 0 7.487 1.82 7.487 1.82L20.709 2.84c-.168-.518-.49-.84-.896-.84h-7.612c-.406 0-.7.322-.896.84z" />
                 <defs>
                   <linearGradient id="vscodeIconsFileTypeAstro0" x1="8.19" x2="16.91" y1="23" y2="18.89" gradientTransform="translate(-.673 -2.198)scale(1.3993)" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#d83333" />
@@ -132,21 +125,15 @@ const t = useTranslations(lang);
                   <path fill="#fff" d="m167.318 134.593l-3.708 41.426l-35.625 9.616v33.231l65.483-18.148l.48-5.397l7.506-84.092l.779-8.578L208 38h-80.015v31.942h45.009l-2.906 32.709h-42.103v31.942z" />
                 </g>
               </svg>
-              <svg class="inline-block w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
-                <g fill="none">
-                  <rect width="256" height="256" fill="CurrentColor" rx="60" />
-                  <path fill="#000" d="M49.158 100.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14H34zM61.56 112.33l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226zM116.186 80h14.628l-4.134 20.246h13.144c7.208.142 12.578 1.626 16.112 4.452c3.604 2.826 4.664 8.198 3.18 16.112l-7.102 35.298h-14.84l6.784-33.708c.706-3.534.494-6.042-.636-7.526s-3.568-2.226-7.314-2.226l-11.766-.106l-8.692 43.566h-14.628zm58.638 20.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14h-14.734zm12.402 12.084l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226z" />
-                </g>
-              </svg>
             </div>
             </div>
-            <div class="order-first lg:order-last not-prose">
+            <div class="order-first lg:order-last max-w-[320px] lg:max-w-full mx-auto not-prose">
                 <div class="mockup-browser bg-base-300">
                     <div class="mockup-browser-toolbar">
-                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://old.h2ovoda.com.ua/" target="_blank">https://old.h2ovoda.com.ua/</a></div>
+                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://vratskyi.pages.dev/en/" target="_blank">https://vratskyi.pages.dev/en/</a></div>
                     </div>
                     <div class="flex justify-center bg-base-200">
-                        <Image src={h2ovodaOld} transition:name='Сайт доставки воды 1.0' class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" alt='Сайт доставки воды 1.0' format='avif' width='600' height='400' />
+                        <Image src={vratskyiBlog} transition:name={t('portfolio.card.2.title')} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" format='avif' alt='Персональный блог и портфолио' width='600' height='400' />
                     </div>
                   </div>
             </div>
