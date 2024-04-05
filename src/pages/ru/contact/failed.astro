@@ -1,6 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Layout from '../../../layouts/Layout.astro'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,7 +12,7 @@ const t = useTranslations(lang);
         <div class="hero h-svh">
             <div class="hero-content text-center">
               <div class="max-w-2xl">
-                <h1 class="text-5xl font-bold" set:html={t('contact.form.error')}></h1>
+                <h1 class="text-5xl font-bold" set:html={t('contact.form.failed')}></h1>
                 <a class="btn btn-primary" href={`/${lang}/contact`}>{t('contact.form.button.repeat')}</a>
               </div>
             </div>
