@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title=`${t('nav.about')} - VRATSKYI`>
+
+    <div class="mx-auto w-full max-w-[1024px] my-[80px]">
+        <div class="hero h-svh">
+            <div class="hero-content text-center">
+              <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold" set:html={t('contact.form.error')}></h1>
+                <a class="btn btn-primary" href={`/${lang}/contact`}>{t('contact.form.button.repeat')}</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+</Layout>
