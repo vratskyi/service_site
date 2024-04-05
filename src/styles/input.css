@@ -67,3 +67,19 @@ a {
   background-image: radial-gradient(var(--fallback-a, oklch(var(--a) / 0.3)), 1px, transparent 1px);
   background-size: 120px 120px;
 }
+
+.animate {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+.animate.active-animate {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.active-animate {
+	visibility: visible !important;
+}

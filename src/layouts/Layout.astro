@@ -12,8 +12,32 @@ const { title = 'VRATSKYI' } = Astro.props;
 <html lang={lang}>
   <Head title={title} />
   <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased"> 
-        <Header transition:persist />
+    <Header transition:persist />
     <slot />
-      <Footer transition:persist>
-    </body>
+    <Footer transition:persist />
+    <script type="text/javascript" is:inline transition:persist data-astro-rerun>
+      document.addEventListener('astro:page-load', () => {
+        function animate() {
+          console.log('Animate function is called');
+          let animates = document.querySelectorAll('.animate');
+
+          animates.forEach(element => {
+            let windowHeight = window.innerHeight;
+            let elementTop = element.getBoundingClientRect().top;
+            let elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+              element.classList.add('active-animate');
+            } else {
+              element.classList.remove('active-animate');
+            }
+          });
+        }
+
+        animate(); // Вызываем функцию animate при загрузке страницы для инициализации видимости элементов
+
+        window.addEventListener('scroll', animate); // Добавляем обработчик события прокрутки для вызова функции animate при прокрутке страницы
+      });
+    </script>
+  </body>
 </html>
