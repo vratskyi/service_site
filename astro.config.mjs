@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import mdx from "@astrojs/mdx";
 
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,12 +15,14 @@ export default defineConfig({
     SVG: true
   }), mdx({
     syntaxHighlight: 'shiki',
-    shikiConfig: { theme: 'dracula' },
+    shikiConfig: {
+      theme: 'dracula'
+    },
     // remarkPlugins: [remarkToc],
     // rehypePlugins: [rehypeMinifyHtml],
     // remarkRehype: { footnoteLabel: 'Footnotes' },
-    gfm: false,
-  }),],
+    gfm: false
+  })],
   // i18n settings
   i18n: {
     defaultLocale: "ru",
@@ -42,5 +45,13 @@ export default defineConfig({
   experimental: {
     clientPrerender: true,
     directRenderScript: true
-  }
+  },
+  output: "server",
+  adapter: cloudflare({ 
+    mode: 'directory',
+    functionPerRoute: true,
+    routes: {
+      strategy: 'auto'
+    } 
+  }),
 });

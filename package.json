@@ -11,6 +11,7 @@
     "css": "tailwindcss -c ./tailwind.config.mjs -i ./src/styles/input.css -o ./public/styles/global.css  --minify --watch"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^10.0.2",
     "@astrojs/mdx": "^2.2.3",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.5.1",
