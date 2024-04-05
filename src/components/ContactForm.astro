@@ -6,7 +6,7 @@ const t = useTranslations(lang);
 ---
 
 <div class="mt-5 grid place-content-center">
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form id="my-form" action="https://formspree.io/f/xbjnprpp" method="POST" class="grid place-content-center mt-10 gap-y-5">
       <div class="grid md:grid-flow-col md:place-content-center gap-y-2 md:gap-x-2 w-full">
           <label class="input input-bordered flex items-center gap-2">
@@ -28,6 +28,7 @@ const t = useTranslations(lang);
       </div>
       <div class="grid grid-flow-col place-content-between">
           <button type="submit" class="btn btn-sm btn-primary place-self-start">{t('contact.form.button.submit')}</button>
+          <div class="g-recaptcha" data-sitekey="6Ld3rLEpAAAAAFDl7xWEg4-esV2ngSW0mm3ycdyJ" data-size="compact"></div>
       </div>
       <div class="mt-5">
           <p id="my-form-status" class="prose"></p>
