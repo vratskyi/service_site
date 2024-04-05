@@ -13,9 +13,9 @@ document.addEventListener('astro:page-load', () => {
   const logos = document.querySelectorAll('[id="logo"]');
 
   // Установка темы по умолчанию
-  let defaultTheme = 'codeForgeBlack';
+  let defaultTheme = 'codeForgeLight';
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeLight)').matches) {
-    defaultTheme = 'codeForgeLight';
+    defaultTheme = 'codeForgeBlack';
   }
 
   // Проверка cookies
