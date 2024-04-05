@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <div class="flex justify-between items-center my-2 p-3 !z-[100]">
-    <div class="flex space-x-5">
+    <div class="flex space-x-5 items-center">
     <!-- переключатель языка -->
     <SwitchLang transition:persist />
     <!-- переключатель тем -->
@@ -69,3 +69,5 @@ const t = useTranslations(lang);
     <Socials transition:persist />
 </div>
 </div>
+
+<script src="/scripts/dynamicAdapt.js" defer transition:persist data-astro-rerun></script>
