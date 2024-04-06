@@ -9,14 +9,14 @@ const { title = 'VRATSKYI' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-theme="codeForgeLight">
   <Head title={title} />
   <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased"> 
-    <Header transition:persist />
+    <Header />
     <slot />
-    <Footer transition:persist />
-    <script type="text/javascript" is:inline transition:persist data-astro-rerun>
-      document.addEventListener('astro:page-load', () => {
+    <Footer />
+    <script type="text/javascript" is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
         function animate() {
           let animates = document.querySelectorAll('.animate');
 

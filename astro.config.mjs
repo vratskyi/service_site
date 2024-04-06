@@ -44,14 +44,21 @@ export default defineConfig({
   },
   experimental: {
     clientPrerender: true,
-    directRenderScript: true
+    directRenderScript: false
   },
   output: "server",
   adapter: cloudflare({ 
     mode: 'directory',
     functionPerRoute: true,
     routes: {
-      strategy: 'auto'
-    } 
+      strategy: 'auto',
+      '/ru/*': {
+        script: './src/pages/ru'
+      },
+      // Маршруты для украинского языка
+      '/ua/*': {
+        script: './src/pages/ua'
+      }
+    }
   }),
 });

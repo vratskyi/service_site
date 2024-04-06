@@ -6,23 +6,15 @@
     </label>
 </div>
 
-<script type="text/javascript" transition:persist data-astro-rerun is:inline>
-document.addEventListener('astro:page-load', () => {
+<script type="text/javascript" is:inline>
+document.addEventListener('DOMContentLoaded', () => {
   // Переключатель тем
   const themeSwitcher = document.querySelector('.switch-theme input[type="checkbox"]');
   const logos = document.querySelectorAll('[id="logo"]');
 
-  // Установка темы по умолчанию
-  let defaultTheme = 'codeForgeLight';
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeLight)').matches) {
-    defaultTheme = 'codeForgeBlack';
-  }
-
   // Проверка cookies
   const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-  if (savedTheme) {
-    defaultTheme = savedTheme;
-  }
+  let defaultTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeLight)').matches ? 'codeForgeBlack' : 'codeForgeLight');
 
   document.documentElement.setAttribute('data-theme', defaultTheme);
   themeSwitcher.checked = defaultTheme === 'codeForgeLight';

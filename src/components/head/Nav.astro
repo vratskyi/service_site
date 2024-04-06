@@ -10,9 +10,9 @@ const t = useTranslations(lang);
 <div class="flex justify-between items-center my-2 p-3 !z-[100]">
     <div class="flex space-x-5 items-center">
     <!-- переключатель языка -->
-    <SwitchLang transition:persist />
+    <SwitchLang />
     <!-- переключатель тем -->
-    <ThemeSwitcher transition:persist />
+    <ThemeSwitcher />
     </div>
     <label for="my-drawer">
         <svg class="inline-block w-6 h-6 stroke-current hover:text-primary duration-150" role="button" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -66,8 +66,8 @@ const t = useTranslations(lang);
         </a></li>
     </ul>
 <div class="socials grid place-content-center place-items-center gap-y-5">
-    <Socials transition:persist />
+    <Socials />
 </div>
 </div>
 
-<script src="/scripts/dynamicAdapt.js" defer transition:persist data-astro-rerun></script>
+<script src="/scripts/dynamicAdapt.js" defer></script>

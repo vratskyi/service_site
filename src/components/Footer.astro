@@ -39,7 +39,7 @@ const t = useTranslations(lang);
   </footer>
 
   <script data-astro-rerun is:inline>
-    document.addEventListener('astro:page-load', () => {
+    document.addEventListener('DOMContentLoaded', () => {
       // Получение текущей даты
       let currentDate = new Date();
       // Извлечение текущего года из объекта даты

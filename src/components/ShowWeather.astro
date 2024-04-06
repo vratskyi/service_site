@@ -9,8 +9,8 @@ const t = useTranslations(lang);
   {t("nav.city")} 🕐<span id="weather"></span>
 </div>
 
-<script type="text/javascript" transition:persist data-astro-rerun is:inline>
-  document.addEventListener("astro:page-load", () => {
+<script type="text/javascript" is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
     const api =
       "https://api.weatherapi.com/v1/current.json?key=f93e372191eb42b981702543240903&q=Kyiv&aqi=no";
 

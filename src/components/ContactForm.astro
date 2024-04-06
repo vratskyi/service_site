@@ -26,7 +26,7 @@ const t = useTranslations(lang);
       <div class="label justify-end">
           <span id="contactTextCounter" class="label-text-alt">0/900</span>
       </div>
-      <div class="grid grid-flow-col place-content-between">
+      <div class="grid md:grid-flow-col place-content-between gap-y-5 md:gap-y-0">
           <button type="submit" class="btn btn-sm btn-primary place-self-start">{t('contact.form.button.submit')}</button>
           <div class="g-recaptcha" data-sitekey="6Ld3rLEpAAAAAFDl7xWEg4-esV2ngSW0mm3ycdyJ"></div>
       </div>
@@ -36,8 +36,8 @@ const t = useTranslations(lang);
   </form>
 </div>
 
-<script type="text/javascript" transition:persist data-astro-rerun is:inline>
-document.addEventListener('astro:page-load', () => {
+<script type="text/javascript" is:inline>
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("my-form");
     const status = document.getElementById("my-form-status");
 
@@ -85,9 +85,9 @@ document.addEventListener('astro:page-load', () => {
 });
 </script>
 
-<script type="text/javascript" transition:persist data-astro-rerun is:inline>
+<script type="text/javascript" is:inline>
 
-document.addEventListener('astro:page-load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const counter = document.getElementById('contactTextCounter');
     const contactText = document.getElementById('contactText');
 

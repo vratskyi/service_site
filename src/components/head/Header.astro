@@ -19,21 +19,21 @@ const t = useTranslations(lang);
     <div class="navbar-start">
       <!-- кнопка меню -->
       <div class="grid grid-flow-col gap-x-5">
-        <MenuButton transition:persist />
+        <MenuButton />
         <div class="place-self-center">
           {myStatus.status === 'free' ? <ImFreeLabel /> : <ImBusyLabel />}
         </div>
       </div>
     </div>
     <!-- логотип -->
-    <Logo transition:persist />
+    <Logo />
     <div class="navbar-end flex space-x-6">
       <div class="flex space-x-2"></div>
-      <div data-da=".socials,648,0" transition:persist>
-        <ShowWeather transition:persist />
+      <div data-da=".socials,648,0">
+        <ShowWeather />
       </div>
       <!-- заказать -->
-      <OrderButton transition:persist />
+      <OrderButton />
     </div>
   </div>
 </header>
