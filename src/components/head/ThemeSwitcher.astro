@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Проверка cookies
   const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-  let defaultTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeLight)').matches ? 'codeForgeBlack' : 'codeForgeLight');
+  let defaultTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeBlack)').matches ? 'codeForgeLight' : 'codeForgeBlack');
 
   document.documentElement.setAttribute('data-theme', defaultTheme);
   themeSwitcher.checked = defaultTheme === 'codeForgeLight';
