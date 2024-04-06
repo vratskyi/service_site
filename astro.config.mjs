@@ -10,11 +10,11 @@ export default defineConfig({
   integrations: [
     tailwind(),
     compress({
-      CSS: true,
+      CSS: false,
       HTML: false,
       Image: true,
       JavaScript: true,
-      SVG: true,
+      SVG: false,
     }),
     mdx({
       syntaxHighlight: "shiki",
