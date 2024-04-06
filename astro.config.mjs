@@ -30,13 +30,14 @@ export default defineConfig({
   // i18n settings
   i18n: {
     defaultLocale: "ru",
-    locales: ["ru", "ua"],
+    locales: ["ru", "ua", "en"],
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: true,
     },
     fallback: {
       ua: "ru",
+      en: "ru",
     },
   },
   redirects: {

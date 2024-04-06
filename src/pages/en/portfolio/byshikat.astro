@@ -1,0 +1,145 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../../../layouts/Layout.astro'
+import byshikat from '../../../images/online-store-byshikat.png'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title='VRATSKYI - h2ovoda'>
+
+      
+    <div class="h-full mb-[400px]">
+          <div class="grid place-content-start place-self-start mt-[80px] w-full max-w-[1280px] mx-auto">
+              <div class="text-sm breadcrumbs">
+                  <ul>
+                      <li><a href={`/${lang}/`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                  <path d="M2 12.204c0-2.289 0-3.433.52-4.381c.518-.949 1.467-1.537 3.364-2.715l2-1.241C9.889 2.622 10.892 2 12 2c1.108 0 2.11.622 4.116 1.867l2 1.241c1.897 1.178 2.846 1.766 3.365 2.715c.519.948.519 2.092.519 4.38v1.522c0 3.9 0 5.851-1.172 7.063C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.212C2 19.576 2 17.626 2 13.725z" />
+                                  <path stroke-linecap="round" d="M12 15v3" />
+                              </g>
+                          </svg>
+                          {t('nav.home')}
+                      </a></li>
+                      <li><a href={`/${lang}/portfolio`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                  <path d="M7 2h10M5 6h14" />
+                                  <rect width="18" height="12" x="3" y="10" rx="2" />
+                              </g>
+                          </svg>
+                          {t('nav.portfolio')}
+                      </a>
+                  </li>
+                  <li>
+                    <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M14 6h-4c-1.356 0-2.468 0-3.39.054c-1.645.097-2.688.367-3.438 1.118C2 8.343 2 10.229 2 14c0 3.771 0 5.657 1.172 6.828C4.343 22 6.229 22 10 22h4c3.771 0 5.657 0 6.828-1.172C22 19.657 22 17.771 22 14c0-3.771 0-5.657-1.172-6.828c-.75-.75-1.793-1.02-3.437-1.118C16.468 6 15.356 6 14 6Z" />
+                            <path d="M6.61 6.054c.823-.02 1.55-.6 1.83-1.374l.035-.103L8.5 4.5c.042-.127.064-.19.086-.246a2 2 0 0 1 1.735-1.25C10.38 3 10.448 3 10.58 3h2.838c.133 0 .2 0 .26.004a2 2 0 0 1 1.735 1.25c.023.056.044.12.086.246l.026.077c.018.053.026.08.035.103c.28.775 1.007 1.354 1.83 1.374" opacity="0.5" />
+                            <path stroke-linecap="round" d="M21.662 8.72c-3.01 1.956-4.515 2.934-6.101 3.427a12 12 0 0 1-7.121 0c-1.587-.493-3.092-1.47-6.102-3.427" opacity="0.5" />
+                            <path stroke-linecap="round" d="M8 11v2m8-2v2" />
+                        </g>
+                    </svg>
+                      h2ovoda
+              </li>
+                  </ul>
+                </div>
+          </div>
+
+          <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start w-full mt-[60px] lg:mt-[80px] p-5 md:p-0">
+            <div class="p-5 w-full max-w-md md:max-w-full h-full">
+                <h1 class="relative">{t('portfolio.card.4.title')}
+            </h1>
+            <p class="prose" set:html={t('portfolio.card.4.page.description')}></p>
+            <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start overflow-x-auto snap-x snap-mandatory mt-10 bg-base-200/20 backdrop-blur-3xl rounded-box p-5 lg:p-10">
+                <div class="grid place-items-center scroll-ml-5 snap-center ml-40 md:ml-0">
+                  <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2m-4 0h4m-4 0v1m4-1v1m0 0a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v0m4 0h-4m2 10.008" />
+                  </svg>
+                    <p class="text-xs">{t('portfolio.card.4.futures.1')}</p>
+                </div>
+                <div class="divider divider-horizontal"></div>
+                <div class="grid place-items-center scroll-ml-5 snap-center">
+                    <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                        <mask id="lineMdSpeedLoop0">
+                          <path fill="none" stroke="#fff" stroke-dasharray="56" stroke-dashoffset="56" stroke-linecap="round" stroke-width="1.5" d="M5 19V19C4.69726 19 4.41165 18.8506 4.25702 18.5904C3.45852 17.2464 3 15.6767 3 14C3 9.02944 7.02944 5 12 5C16.9706 5 21 9.02944 21 14C21 15.6767 20.5415 17.2464 19.743 18.5904C19.5884 18.8506 19.3027 19 19 19z">
+                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="56;0" />
+                          </path>
+                          <g fill-opacity="0" transform="rotate(-100 12 14)">
+                            <path d="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z">
+                              <animate fill="freeze" attributeName="d" begin="0.4s" dur="0.2s" values="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z;M16 14C16 16.21 14.21 18 12 18C9.79 18 8 16.21 8 14C8 11.79 12 0 12 0C12 0 16 11.79 16 14Z" />
+                            </path>
+                            <path fill="#fff" d="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z">
+                              <animate fill="freeze" attributeName="d" begin="0.4s" dur="0.2s" values="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z;M14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 12 4 12 4C12 4 14 12.9 14 14Z" />
+                            </path>
+                            <set attributeName="fill-opacity" begin="0.4s" to="1" />
+                            <animateTransform attributeName="transform" begin="0.6s" dur="6s" repeatCount="indefinite" type="rotate" values="-100 12 14;45 12 14;45 12 14;45 12 14;20 12 14;10 12 14;0 12 14;35 12 14;45 12 14;55 12 14;50 12 14;15 12 14;-20 12 14;-100 12 14" />
+                          </g>
+                        </mask>
+                        <rect width="24" height="24" fill="currentColor" mask="url(#lineMdSpeedLoop0)" />
+                      </svg>
+                    <p class="text-xs">{t('portfolio.card.4.futures.2')}</p>
+                </div>
+                <div class="divider divider-horizontal"></div>
+                <div class="grid place-items-center scroll-ml-5 snap-center">
+                    <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3.88 1h7.24c.403 0 .735 0 1.006.022c.281.023.54.072.782.196a2 2 0 0 1 .874.874c.124.243.173.501.196.782c.022.27.022.603.022 1.005v7.241c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H3.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C1 11.856 1 11.523 1 11.12V3.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C3.144 1 3.477 1 3.88 1m-.924 1.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C2 3.18 2 3.472 2 3.9V7h5V2H3.9c-.428 0-.72 0-.944.019M7 8H2v3.1c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019H7zm1 0h5v3.1c0 .428 0 .72-.019.944c-.018.22-.05.332-.09.41a1 1 0 0 1-.437.437c-.078.04-.19.072-.41.09c-.225.019-.516.019-.944.019H8zm5-1H8V2h3.1c.428 0 .72 0 .944.019c.22.018.332.05.41.09a1 1 0 0 1 .437.437c.04.078.072.19.09.41c.019.225.019.516.019.944z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-xs">{t('portfolio.card.4.futures.3')}</p>
+                </div>
+            </div>
+            <div class="grid grid-flow-col gap-x-10 place-content-center place-items-center mt-5 md:mt-10">
+                <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                    <g fill="none">
+                        <rect width="256" height="256" fill="#0073aa" rx="60" />
+                        <path fill="#fff" d="M42.214 127.994c0 33.955 19.733 63.299 48.347 77.205L49.641 93.083a85.46 85.46 0 0 0-7.427 34.911m143.694-4.329c0-10.601-3.808-17.943-7.074-23.658c-4.349-7.066-8.425-13.05-8.425-20.116c0-7.886 5.981-15.226 14.405-15.226c.381 0 .741.047 1.112.068c-15.262-13.982-35.595-22.519-57.929-22.519c-29.968 0-56.335 15.376-71.673 38.666c2.012.06 3.909.103 5.52.103c8.973 0 22.862-1.09 22.862-1.09c4.624-.272 5.17 6.52.55 7.067c0 0-4.647.547-9.818.818l31.238 92.918l18.773-56.303l-13.365-36.618c-4.619-.271-8.995-.818-8.995-.818c-4.623-.271-4.081-7.339.542-7.066c0 0 14.166 1.088 22.595 1.088c8.972 0 22.862-1.088 22.862-1.088c4.628-.273 5.171 6.519.55 7.066c0 0-4.657.547-9.818.818l31.001 92.214l8.556-28.592c3.709-11.866 6.531-20.388 6.531-27.732" />
+                        <path fill="#fff" d="m129.503 135.498l-25.738 74.79a85.779 85.779 0 0 0 24.233 3.495a85.682 85.682 0 0 0 28.486-4.863a7.476 7.476 0 0 1-.61-1.182zm73.766-48.66a65.8 65.8 0 0 1 .578 8.82c0 8.705-1.626 18.491-6.523 30.727l-26.203 75.759c25.503-14.872 42.657-42.501 42.657-74.148c.001-14.915-3.808-28.94-10.509-41.158" />
+                        <path fill="#fff" d="M127.998 28C72.86 28 28 72.857 28 127.994c0 55.144 44.86 99.999 99.998 99.999c55.135 0 100.002-44.855 100.002-99.999C227.998 72.857 183.133 28 127.998 28m0 195.41c-52.61 0-95.413-42.804-95.413-95.416c0-52.609 42.802-95.409 95.413-95.409c52.607 0 95.407 42.8 95.407 95.409c0 52.612-42.8 95.416-95.407 95.416" />
+                    </g>
+                </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#f0db4f" rx="60" />
+                  <path fill="#323330" d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.579c-17.357-7.388-28.871-16.668-28.871-36.258c0-18.044 13.748-31.792 35.229-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.139 14.778 14.608l6.014 2.577c20.449 8.765 31.963 17.699 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#e14e1d" rx="60" />
+                  <path fill="#fff" d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38z" />
+                  <path fill="#ebebeb" d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014z" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#0277bd" rx="60" />
+                  <path fill="#ebebeb" d="m53.753 102.651l2.862 31.942h71.481v-31.942zM128.095 38H48l2.904 31.942h77.191zm0 180.841v-33.233l-.14.037l-35.574-9.605l-2.274-25.476H58.042l4.475 50.154l65.431 18.164z" />
+                  <path fill="#fff" d="m167.318 134.593l-3.708 41.426l-35.625 9.616v33.231l65.483-18.148l.48-5.397l7.506-84.092l.779-8.578L208 38h-80.015v31.942h45.009l-2.906 32.709h-42.103v31.942z" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="CurrentColor" rx="60" />
+                  <path fill="#000" d="M49.158 100.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14H34zM61.56 112.33l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226zM116.186 80h14.628l-4.134 20.246h13.144c7.208.142 12.578 1.626 16.112 4.452c3.604 2.826 4.664 8.198 3.18 16.112l-7.102 35.298h-14.84l6.784-33.708c.706-3.534.494-6.042-.636-7.526s-3.568-2.226-7.314-2.226l-11.766-.106l-8.692 43.566h-14.628zm58.638 20.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14h-14.734zm12.402 12.084l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226z" />
+                </g>
+              </svg>
+            </div>
+            </div>
+            <div class="order-first lg:order-last max-w-[320px] lg:max-w-full mx-auto not-prose not-prose">
+                <div class="mockup-browser bg-base-300">
+                    <div class="mockup-browser-toolbar">
+                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://byshikat.com/" target="_blank">https://byshikat.com/</a></div>
+                    </div>
+                    <div class="flex justify-center bg-base-200">
+                        <Image src={byshikat} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" format='avif' alt='Byshikat интернет-магазин обуви' width='600' height='400' />
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+</Layout>

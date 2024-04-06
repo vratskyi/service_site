@@ -1,0 +1,28 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import ContactForm from "../../../components/ContactForm.astro";
+import Socials from "../../../components/Socials.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title=`${t('nav.contact')} - VRATSKYI`>
+  <section class="mx-auto w-full max-w-[800px] my-[80px] md:my-[200px]">
+    <div class="mx-auto w-full max-w-2xl p-5">
+      <h1>Contact me</h1>
+      <p>
+        Tell me about your project in brief, what you would like and what you expect,
+        and if possible, provide a link to your project so I can give you a
+        a clearer answer.
+      </p>
+     <div class="flex flex-col lg:flex-row items-center">I'm on social media: <div class="ml-5 bg-base-300 rounded-box"><Socials /></div></div> 
+    </div>
+    <div class="w-full max-w-md mx-auto">
+        <div class="divider mt-10"></div>
+      </div>
+    <ContactForm />
+    <div class="label-text-alt mt-10 w-full max-w-xs md:max-w-lg mx-auto">By submitting your application you agree to our <a class="link link-primary" href={`/${lang}/privacy-policy`}>privacy policy.</a></div>
+  </section>
+</Layout>

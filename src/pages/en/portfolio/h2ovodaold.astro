@@ -1,0 +1,150 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../../../layouts/Layout.astro'
+import h2ovodaOld from '../../../images/water-website.png'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title='VRATSKYI - h2ovoda'>
+
+      
+    <div class="h-full mb-[400px]">
+          <div class="grid place-content-start place-self-start mt-[80px] w-full max-w-[1280px] mx-auto">
+              <div class="text-sm breadcrumbs">
+                  <ul>
+                      <li><a href={`/${lang}/`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                  <path d="M2 12.204c0-2.289 0-3.433.52-4.381c.518-.949 1.467-1.537 3.364-2.715l2-1.241C9.889 2.622 10.892 2 12 2c1.108 0 2.11.622 4.116 1.867l2 1.241c1.897 1.178 2.846 1.766 3.365 2.715c.519.948.519 2.092.519 4.38v1.522c0 3.9 0 5.851-1.172 7.063C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.212C2 19.576 2 17.626 2 13.725z" />
+                                  <path stroke-linecap="round" d="M12 15v3" />
+                              </g>
+                          </svg>
+                          {t('nav.home')}
+                      </a></li>
+                      <li><a href={`/${lang}/portfolio`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                  <path d="M7 2h10M5 6h14" />
+                                  <rect width="18" height="12" x="3" y="10" rx="2" />
+                              </g>
+                          </svg>
+                          {t('nav.portfolio')}
+                      </a>
+                  </li>
+                  <li>
+                    <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M14 6h-4c-1.356 0-2.468 0-3.39.054c-1.645.097-2.688.367-3.438 1.118C2 8.343 2 10.229 2 14c0 3.771 0 5.657 1.172 6.828C4.343 22 6.229 22 10 22h4c3.771 0 5.657 0 6.828-1.172C22 19.657 22 17.771 22 14c0-3.771 0-5.657-1.172-6.828c-.75-.75-1.793-1.02-3.437-1.118C16.468 6 15.356 6 14 6Z" />
+                            <path d="M6.61 6.054c.823-.02 1.55-.6 1.83-1.374l.035-.103L8.5 4.5c.042-.127.064-.19.086-.246a2 2 0 0 1 1.735-1.25C10.38 3 10.448 3 10.58 3h2.838c.133 0 .2 0 .26.004a2 2 0 0 1 1.735 1.25c.023.056.044.12.086.246l.026.077c.018.053.026.08.035.103c.28.775 1.007 1.354 1.83 1.374" opacity="0.5" />
+                            <path stroke-linecap="round" d="M21.662 8.72c-3.01 1.956-4.515 2.934-6.101 3.427a12 12 0 0 1-7.121 0c-1.587-.493-3.092-1.47-6.102-3.427" opacity="0.5" />
+                            <path stroke-linecap="round" d="M8 11v2m8-2v2" />
+                        </g>
+                    </svg>
+                      h2ovoda
+              </li>
+                  </ul>
+                </div>
+          </div>
+
+          <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start mt-[60px] lg:mt-[80px] p-5 md:p-0">
+            <div class="p-5 w-full max-w-md md:max-w-full h-full">
+                <h1 class="relative">{t('portfolio.card.3.title')}
+            </h1>
+            <p class="prose" set:html={t('portfolio.card.3.page.description')}></p>
+            <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start w-full overflow-x-auto snap-x snap-mandatory mt-10 bg-base-200/20 backdrop-blur-3xl rounded-box p-5 lg:p-10">
+                <div class="grid place-items-center scroll-ml-5 snap-center ml-40 md:ml-0">
+                  <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2m-4 0h4m-4 0v1m4-1v1m0 0a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v0m4 0h-4m2 10.008" />
+                  </svg>
+                    <p class="text-xs">{t('portfolio.card.3.futures.1')}</p>
+                </div>
+                <div class="divider divider-horizontal"></div>
+                <div class="grid place-items-center scroll-ml-5 snap-center">
+                    <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                        <mask id="lineMdSpeedLoop0">
+                          <path fill="none" stroke="#fff" stroke-dasharray="56" stroke-dashoffset="56" stroke-linecap="round" stroke-width="1.5" d="M5 19V19C4.69726 19 4.41165 18.8506 4.25702 18.5904C3.45852 17.2464 3 15.6767 3 14C3 9.02944 7.02944 5 12 5C16.9706 5 21 9.02944 21 14C21 15.6767 20.5415 17.2464 19.743 18.5904C19.5884 18.8506 19.3027 19 19 19z">
+                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="56;0" />
+                          </path>
+                          <g fill-opacity="0" transform="rotate(-100 12 14)">
+                            <path d="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z">
+                              <animate fill="freeze" attributeName="d" begin="0.4s" dur="0.2s" values="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z;M16 14C16 16.21 14.21 18 12 18C9.79 18 8 16.21 8 14C8 11.79 12 0 12 0C12 0 16 11.79 16 14Z" />
+                            </path>
+                            <path fill="#fff" d="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z">
+                              <animate fill="freeze" attributeName="d" begin="0.4s" dur="0.2s" values="M12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14C12 14 12 14 12 14Z;M14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 12 4 12 4C12 4 14 12.9 14 14Z" />
+                            </path>
+                            <set attributeName="fill-opacity" begin="0.4s" to="1" />
+                            <animateTransform attributeName="transform" begin="0.6s" dur="6s" repeatCount="indefinite" type="rotate" values="-100 12 14;45 12 14;45 12 14;45 12 14;20 12 14;10 12 14;0 12 14;35 12 14;45 12 14;55 12 14;50 12 14;15 12 14;-20 12 14;-100 12 14" />
+                          </g>
+                        </mask>
+                        <rect width="24" height="24" fill="currentColor" mask="url(#lineMdSpeedLoop0)" />
+                      </svg>
+                    <p class="text-xs">{t('portfolio.card.3.futures.2')}</p>
+                </div>
+                <div class="divider divider-horizontal"></div>
+                <div class="grid place-items-center scroll-ml-5 snap-center">
+                    <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3.88 1h7.24c.403 0 .735 0 1.006.022c.281.023.54.072.782.196a2 2 0 0 1 .874.874c.124.243.173.501.196.782c.022.27.022.603.022 1.005v7.241c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H3.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C1 11.856 1 11.523 1 11.12V3.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C3.144 1 3.477 1 3.88 1m-.924 1.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C2 3.18 2 3.472 2 3.9V7h5V2H3.9c-.428 0-.72 0-.944.019M7 8H2v3.1c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019H7zm1 0h5v3.1c0 .428 0 .72-.019.944c-.018.22-.05.332-.09.41a1 1 0 0 1-.437.437c-.078.04-.19.072-.41.09c-.225.019-.516.019-.944.019H8zm5-1H8V2h3.1c.428 0 .72 0 .944.019c.22.018.332.05.41.09a1 1 0 0 1 .437.437c.04.078.072.19.09.41c.019.225.019.516.019.944z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-xs">{t('portfolio.card.3.futures.3')}</p>
+                </div>
+            </div>
+            <div class="grid grid-flow-col gap-x-10 place-content-center place-items-center mt-5 md:mt-10">
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                <path fill="url(#vscodeIconsFileTypeAstro0)" d="M11.025 20.499c-.532 1.75-.154 4.184 1.105 5.331v-.042l.042-.112c.154-.741.756-1.203 1.526-1.175c.713.014 1.12.392 1.217 1.217c.042.308.042.616.056.938v.098c0 .7.196 1.371.588 1.959c.35.56.84.993 1.497 1.287l-.028-.056l-.028-.112c-.49-1.469-.14-2.49 1.147-3.358l.392-.266l.868-.573a4.254 4.254 0 0 0 1.791-3.037c.07-.532 0-1.05-.154-1.553l-.21.14c-1.945 1.035-4.17 1.4-6.325.98c-1.301-.197-2.56-.56-3.498-1.652z" />
+                <path fill="currentColor" d="M4.925 20.191s3.736-1.82 7.486-1.82l2.84-8.759c.098-.42.406-.7.756-.7s.644.28.756.714l2.826 8.746c4.45 0 7.487 1.82 7.487 1.82L20.709 2.84c-.168-.518-.49-.84-.896-.84h-7.612c-.406 0-.7.322-.896.84z" />
+                <defs>
+                  <linearGradient id="vscodeIconsFileTypeAstro0" x1="8.19" x2="16.91" y1="23" y2="18.89" gradientTransform="translate(-.673 -2.198)scale(1.3993)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#d83333" />
+                    <stop offset="1" stop-color="#f041ff" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 128 128">
+                <path fill="#38bdf8" d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597c6.398-8.531 13.867-11.73 22.398-9.597c4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602c-6.399 8.536-13.867 11.735-22.399 9.602c-4.87-1.215-8.347-4.746-12.207-8.66c-6.27-6.367-13.53-13.738-29.394-13.738M32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66c6.274 6.367 13.536 13.738 29.395 13.738c17.066 0 27.73-8.53 32-25.597c-6.399 8.531-13.867 11.73-22.399 9.597c-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64m0 0" />
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#f0db4f" rx="60" />
+                  <path fill="#323330" d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.579c-17.357-7.388-28.871-16.668-28.871-36.258c0-18.044 13.748-31.792 35.229-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.139 14.778 14.608l6.014 2.577c20.449 8.765 31.963 17.699 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#e14e1d" rx="60" />
+                  <path fill="#fff" d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38z" />
+                  <path fill="#ebebeb" d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014z" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="#0277bd" rx="60" />
+                  <path fill="#ebebeb" d="m53.753 102.651l2.862 31.942h71.481v-31.942zM128.095 38H48l2.904 31.942h77.191zm0 180.841v-33.233l-.14.037l-35.574-9.605l-2.274-25.476H58.042l4.475 50.154l65.431 18.164z" />
+                  <path fill="#fff" d="m167.318 134.593l-3.708 41.426l-35.625 9.616v33.231l65.483-18.148l.48-5.397l7.506-84.092l.779-8.578L208 38h-80.015v31.942h45.009l-2.906 32.709h-42.103v31.942z" />
+                </g>
+              </svg>
+              <svg class="inline-block w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                <g fill="none">
+                  <rect width="256" height="256" fill="CurrentColor" rx="60" />
+                  <path fill="#000" d="M49.158 100.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14H34zM61.56 112.33l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226zM116.186 80h14.628l-4.134 20.246h13.144c7.208.142 12.578 1.626 16.112 4.452c3.604 2.826 4.664 8.198 3.18 16.112l-7.102 35.298h-14.84l6.784-33.708c.706-3.534.494-6.042-.636-7.526s-3.568-2.226-7.314-2.226l-11.766-.106l-8.692 43.566h-14.628zm58.638 20.246h28.408c8.338.07 14.38 2.474 18.126 7.208c3.746 4.734 4.982 11.2 3.71 19.398c-.494 3.746-1.59 7.42-3.286 11.024c-1.626 3.604-3.886 6.854-6.784 9.752c-3.534 3.674-7.314 6.006-11.342 6.996c-4.028.99-8.198 1.484-12.508 1.484h-12.72l-4.028 20.14h-14.734zm12.402 12.084l-6.36 31.8c.424.07.848.106 1.272.106h1.484c6.784.07 12.438-.6 16.96-2.014c4.522-1.484 7.562-6.642 9.116-15.476c1.272-7.42 0-11.696-3.816-12.826c-3.746-1.13-8.444-1.66-14.098-1.59c-.848.07-1.66.106-2.438.106h-2.226z" />
+                </g>
+              </svg>
+            </div>
+            </div>
+            <div class="order-first lg:order-last max-w-[320px] lg:max-w-full mx-auto not-prose not-prose">
+                <div class="mockup-browser bg-base-300">
+                    <div class="mockup-browser-toolbar">
+                      <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://old.h2ovoda.com.ua/" target="_blank">https://old.h2ovoda.com.ua/</a></div>
+                    </div>
+                    <div class="flex justify-center bg-base-200">
+                        <Image src={h2ovodaOld} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" alt='Сайт доставки воды 1.0' format='avif' width='600' height='400' />
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+</Layout>
