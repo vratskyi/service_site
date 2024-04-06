@@ -2,40 +2,59 @@
 import Footer from "../components/Footer.astro";
 import Head from "../components/head/Head.astro";
 import Header from "../components/head/Header.astro";
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
-const { title = 'VRATSKYI' } = Astro.props;
+const { title = "VRATSKYI" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={lang} data-theme="codeForgeBlack">
   <Head title={title} />
-  <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased"> 
+  <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased">
     <Header />
+    <div
+      id="loader"
+      class="h-svh w-svw mx-auto z-[9999] fixed top-0 bottom-0 left-0 right-0 overflow-hidden bg-base-300"
+    >
+      <div class="grid place-content-center place-items-center w-full h-full">
+        <span class="loading loading-spinner w-44 text-inherit"></span>
+      </div>
+    </div>
     <slot />
     <Footer />
     <script type="text/javascript" is:inline>
-      document.addEventListener('DOMContentLoaded', () => {
-        function animate() {
-          let animates = document.querySelectorAll('.animate');
+      const loader = document.getElementById("loader");
+      const body = document.body;
 
-          animates.forEach(element => {
+      if (loader && body) {
+        // Скрыть лоадер после загрузки страницы
+        window.addEventListener("load", () => {
+          loader.classList.add("hidden");
+        });
+      }
+    </script>
+    <script type="text/javascript" is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        function animate() {
+          let animates = document.querySelectorAll(".animate");
+
+          animates.forEach((element) => {
             let windowHeight = window.innerHeight;
             let elementTop = element.getBoundingClientRect().top;
             let elementVisible = 150;
 
             if (elementTop < windowHeight - elementVisible) {
-              element.classList.add('active-animate');
+              element.classList.add("active-animate");
             } else {
-              element.classList.remove('active-animate');
+              element.classList.remove("active-animate");
             }
           });
         }
 
         animate(); // Вызываем функцию animate при загрузке страницы для инициализации видимости элементов
 
-        window.addEventListener('scroll', animate); // Добавляем обработчик события прокрутки для вызова функции animate при прокрутке страницы
+        window.addEventListener("scroll", animate); // Добавляем обработчик события прокрутки для вызова функции animate при прокрутке страницы
       });
     </script>
   </body>

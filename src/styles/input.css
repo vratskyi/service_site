@@ -83,3 +83,8 @@ a {
 .active-animate {
 	visibility: visible !important;
 }
+
+
+body.loading-content {
+  overflow: hidden;
+}

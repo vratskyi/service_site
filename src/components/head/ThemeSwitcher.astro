@@ -8,40 +8,56 @@
 
 <script type="text/javascript" is:inline>
 document.addEventListener('DOMContentLoaded', () => {
-  // Переключатель тем
   const themeSwitcher = document.querySelector('.switch-theme input[type="checkbox"]');
   const logos = document.querySelectorAll('[id="logo"]');
+  const THEME_KEY = 'theme';
 
-  // Проверка cookies
-  const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-  let defaultTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeBlack)').matches ? 'codeForgeLight' : 'codeForgeBlack');
+  // Функция для чтения сохраненной темы из localStorage
+  function getSavedTheme() {
+    return localStorage.getItem(THEME_KEY) || getDefaultTheme();
+  }
 
-  document.documentElement.setAttribute('data-theme', defaultTheme);
-  themeSwitcher.checked = defaultTheme === 'codeForgeLight';
+  // Функция для получения темы по умолчанию
+  function getDefaultTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: codeForgeBlack)').matches
+      ? 'codeForgeLight'
+      : 'codeForgeBlack';
+  }
 
-  // Установка логотипов в зависимости от темы
-  logos.forEach(logo => {
-    logo.src = defaultTheme === 'codeForgeLight' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
-  });
-
-  themeSwitcher.addEventListener('change', function (event) {
-    let theme;
-    if (event.target.checked) {
-      // Если переключатель включен, устанавливаем светлую тему
-      theme = 'codeForgeLight';
-    } else {
-      // Если переключатель выключен, устанавливаем темную тему
-      theme = 'codeForgeBlack';
-    }
-
-    // Установка темы и обновление логотипов
+  // Функция для установки темы
+  function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    localStorage.setItem(THEME_KEY, theme);
+    updateLogos(theme);
+  }
 
+  // Функция для обновления логотипов в зависимости от темы
+  function updateLogos(theme) {
     logos.forEach(logo => {
       logo.src = theme === 'codeForgeLight' ? '/src/images/logo-dark.png' : '/src/images/logo.png';
     });
+  }
+
+  // Сначала применяем тему, чтобы скрыть контент
+  const savedTheme = getSavedTheme();
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeSwitcher.checked = savedTheme === 'codeForgeLight';
+
+  // Затем показываем контент после применения темы
+  document.body.style.visibility = 'visible';
+
+  // Инициализация темы при загрузке страницы
+  const defaultTheme = getSavedTheme();
+  setTheme(defaultTheme);
+  themeSwitcher.checked = defaultTheme === 'codeForgeLight';
+
+  // Обработчик события для переключения темы
+  themeSwitcher.addEventListener('change', function (event) {
+    const theme = event.target.checked ? 'codeForgeLight' : 'codeForgeBlack';
+    setTheme(theme);
   });
 });
+
+
 
 </script>
