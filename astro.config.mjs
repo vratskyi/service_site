@@ -51,14 +51,23 @@ export default defineConfig({
     mode: 'directory',
     functionPerRoute: true,
     routes: {
-      strategy: 'auto',
+      // Маршруты для русского языка
       '/ru/*': {
-        script: './src/pages/ru'
+        script: './src/pages/ru',
+        function: 'page',
+        options: {
+          contentType: 'text/html'
+        }
       },
       // Маршруты для украинского языка
       '/ua/*': {
-        script: './src/pages/ua'
-      }
-    }
+        script: './src/pages/ua',
+        function: 'page',
+        options: {
+          contentType: 'text/html'
+        }
+      },
+      // Другие языки...
+    } 
   }),
 });
