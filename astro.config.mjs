@@ -52,6 +52,8 @@ export default defineConfig({
   },
   output: "hybrid",
   adapter: vercel({
+    functionPerRoute: true,
+    imageService: true,
     isr: {
       expiration: 60 * 60 * 24,
     },
