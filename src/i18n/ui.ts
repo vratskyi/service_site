@@ -272,7 +272,7 @@ export const languages = {
         'nav.hireable.free.description': 'Свободен для сотрудничества, давайте обсудим ваш проект!',
         'nav.hireable.busy': 'Занят',
         'nav.hireable.busy.description': 'Сейчас я занят, но вы можете написать мне.',
-        'footer.donate': 'Угостить меня кофем',
+        'footer.donate': 'Угостить меня кофе',
         'footer.copyright': '© <span id="currentYear"></span> Алексей Врацкий. Все права защищены.',
         'portfolio.subDesc': 'Использованные технологии:',
         'portfolio.externalButton': 'Смотреть',
