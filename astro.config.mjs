@@ -1,73 +1,62 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import mdx from "@astrojs/mdx";
 
-import cloudflare from "@astrojs/cloudflare";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress({
-    CSS: true,
-    HTML: false,
-    Image: true,
-    JavaScript: true,
-    SVG: true
-  }), mdx({
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'dracula'
-    },
-    // remarkPlugins: [remarkToc],
-    // rehypePlugins: [rehypeMinifyHtml],
-    // remarkRehype: { footnoteLabel: 'Footnotes' },
-    gfm: false
-  })],
+  integrations: [
+    tailwind(),
+    compress({
+      CSS: true,
+      HTML: false,
+      Image: true,
+      JavaScript: true,
+      SVG: true,
+    }),
+    mdx({
+      syntaxHighlight: "shiki",
+      shikiConfig: {
+        theme: "dracula",
+      },
+      // remarkPlugins: [remarkToc],
+      // rehypePlugins: [rehypeMinifyHtml],
+      // remarkRehype: { footnoteLabel: 'Footnotes' },
+      gfm: false,
+    }),
+  ],
   // i18n settings
   i18n: {
     defaultLocale: "ru",
     locales: ["ru", "ua"],
     routing: {
       prefixDefaultLocale: true,
-      redirectToDefaultLocale: true
+      redirectToDefaultLocale: true,
     },
     fallback: {
-      ua: "ru"
-    }
+      ua: "ru",
+    },
   },
   redirects: {
-    '/': '/ru'
+    "/": "/ru",
   },
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'viewport'
+    defaultStrategy: "viewport",
   },
   experimental: {
     clientPrerender: true,
-    directRenderScript: false
+    directRenderScript: false,
   },
-  output: "server",
-  adapter: cloudflare({ 
-    mode: 'directory',
-    functionPerRoute: true,
-    routes: {
-      // Маршруты для русского языка
-      '/ru/*': {
-        script: './src/pages/ru',
-        function: 'page',
-        options: {
-          contentType: 'text/html'
-        }
-      },
-      // Маршруты для украинского языка
-      '/ua/*': {
-        script: './src/pages/ua',
-        function: 'page',
-        options: {
-          contentType: 'text/html'
-        }
-      },
-      // Другие языки...
-    } 
+  output: "hybrid",
+  adapter: vercel({
+    isr: {
+      expiration: 60 * 60 * 24,
+    },
+    webAnalytics: {
+      enabled: true,
+    },
   }),
 });
