@@ -5,7 +5,7 @@ import { useTranslatedPath } from "../../i18n/utils";
 
 
 <div class="dropdown dropdown-start">
-  <div tabindex="0" role="button" class="btn m-1 rounded-full bg-base-300 stroke-current hover:text-primary duration-150">
+  <div tabindex="0" role="menuitem" aria-label="Change Language" class="btn m-1 rounded-full bg-base-300 stroke-current hover:text-primary duration-150">
     <svg class="inline-block w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138A47.63 47.63 0 0 1 15 5.621m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
     </svg>
@@ -13,7 +13,7 @@ import { useTranslatedPath } from "../../i18n/utils";
   <ul tabindex="0" id="langSelect" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
     {
       Object.entries(languages).map(([lang, label]) => (
-        <li><a href={useTranslatedPath(lang as "en" | "ua" | "ru"  )('/')} class="stroke-current hover:text-primary duration-150">{label}</a></li>
+        <li><a href={useTranslatedPath(lang as "en" | "ua" | "ru"  )('/')} title={label} class="stroke-current hover:text-primary duration-150">{label}</a></li>
       ))
     }
   </ul>
