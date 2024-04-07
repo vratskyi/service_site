@@ -3,9 +3,7 @@ import Footer from "../components/Footer.astro";
 import Head from "../components/head/Head.astro";
 import Header from "../components/head/Header.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
-
-
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,14 +16,24 @@ const { title = "VRATSKYI" } = Astro.props;
   <body class="mx-auto min-w-full cursor-default prose subpixel-antialiased">
     <Header />
     <!-- Vercel Speed Insights -->
-    <SpeedInsights/>
+    <SpeedInsights />
     <div
       id="loader"
       class="h-svh w-svw mx-auto z-[9999] fixed top-0 bottom-0 left-0 right-0 overflow-hidden bg-base-300"
     >
       <div class="grid place-content-center place-items-center w-full h-full">
         <span class="loading loading-spinner w-44 text-inherit"></span>
-        <p class="mt-10 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-light text-3xl">{t('loader.title')}</p>
+        <p
+          class="mt-10 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-light text-3xl"
+        >
+          {t("loader.title")}
+        </p>
+        <p
+          id="clientOffline"
+          class="hidden mt-2 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-light text-3xl"
+        >
+          Кажеться вы оффлайн, рекомендую проверить соеденение с интернетом.
+        </p>
       </div>
     </div>
     <slot />
@@ -34,6 +42,16 @@ const { title = "VRATSKYI" } = Astro.props;
     <script type="text/javascript" is:inline>
       const loader = document.getElementById("loader");
       const body = document.body;
+      const clientOffline = document.getElementById("clientOffline");
+
+      window.addEventListener("offline", () => {
+        if (clientOffline) {
+          clientOffline.classList.remove("hidden");
+        }
+        if (loader) {
+          loader.classList.add("hidden");
+        }
+      });
 
       if (loader && body) {
         // Скрыть лоадер после загрузки страницы
