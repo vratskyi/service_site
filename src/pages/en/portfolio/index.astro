@@ -7,6 +7,8 @@ import h2ovoda from '../../../images/h2ovoda.png'
 import h2ovodaOld from '../../../images/water-website.png'
 import vratskyiBlog from '../../../images/ov-main.png'
 import lmdlviv from '../../../images/online-store-lmd.png'
+import vratskyi from '../../../images/vratskyi.png'
+import h2ovodabot from '../../../images/h20vodabot.png'
 
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
@@ -137,6 +139,42 @@ const t = useTranslations(lang);
     <div class="my-10 grid grid-cols-1 lg:grid-cols-3 gap-y-10 mx-auto w-full max-w-[1366px] p-5">
       <PortfolioCard 
       image={{
+         src: vratskyi,
+         alt: `${t('portfolio.card.6.title')}`,
+      }},
+      label={t('portfolio.card.6.label')}
+      title={t('portfolio.card.6.title')}
+      description={t('portfolio.card.6.description')}
+      activeButton={{ 
+        title: `${t('portfolio.card.6.activeButton')}`,
+        link: `/${lang}/portfolio/vratskyi`
+      }},
+      exturnalButton={{ 
+        title: `${t('portfolio.card.6.exturnalButton')}`,
+        link: 'https://vratsky.vercel.app/ru/'
+      }}
+       />
+
+       <PortfolioCard 
+       image={{
+          src: h2ovodabot,
+          alt: `${t('portfolio.card.7.title')}`,
+       }},
+       label={t('portfolio.card.7.label')}
+       title={t('portfolio.card.7.title')}
+       description={t('portfolio.card.7.description')}
+       activeButton={{ 
+         title: `${t('portfolio.card.7.activeButton')}`,
+         link: `/${lang}/portfolio/h2ovodabot`
+       }},
+       exturnalButton={{ 
+         title: `${t('portfolio.card.7.exturnalButton')}`,
+         link: 'https://t.me/quickorderh20voda_bot'
+       }}
+        />
+
+      <PortfolioCard 
+      image={{
          src: h2ovoda,
          alt: `${t('portfolio.card.1.title')}`,
       }},
@@ -224,6 +262,7 @@ const t = useTranslations(lang);
             link: 'https://lmd.lviv.ua/'
           }}
            />
+
     </div>
     
 </Layout>
