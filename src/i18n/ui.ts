@@ -256,7 +256,9 @@ export const languages = {
       'contact.form.error': 'Упс! <br /> <span class="text-xl font-light"> Виникла проблема з відправленням вашої форми, спробуйте ще раз.</span>',
 
       'contact.form.button.back': 'На Головну',
-      'contact.form.button.repeat': 'Спробувати ще раз'
+      'contact.form.button.repeat': 'Спробувати ще раз',
+
+      'error.404': 'Упс, я думаю, Ви не хотіли потрапити сюди.',
     },
     ru: {
         'nav.city': 'Киев',
@@ -501,8 +503,10 @@ export const languages = {
         'contact.form.error': 'Упс! <br /> <span class="text-xl font-light"> Возникла проблема с отправкой вашей формы, попробуйте еще раз.</span>',
 
         'contact.form.button.back': 'На Главную',
-        'contact.form.button.repeat': 'Попробовать еще раз'
-    },
+        'contact.form.button.repeat': 'Попробовать еще раз',
+
+        'error.404': 'Упс, я думаю, Вы не хотели попасть сюда.',
+      },
     en: {
       'nav.city': 'Kyiv',
       'nav.lang': 'en English',
@@ -746,6 +750,8 @@ export const languages = {
       'contact.form.error': 'Oops! <br /> <span class="text-xl font-light"> There was a problem submitting your form, please try again.</span>',
 
       'contact.form.button.back': 'To the Home Page',
-      'contact.form.button.repeat': 'Try again'
+      'contact.form.button.repeat': 'Try again',
+
+      'error.404': 'Woops, i guess you didn\'t want to be here.',
   },
   } as const;
