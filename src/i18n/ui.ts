@@ -18,6 +18,7 @@ export const languages = {
 
   export const ui = {
     ua: {
+      'loader.title': 'Завантаження ...',
       'menu.title': 'Меню',
       'nav.city': 'Київ',
       'nav.lang': 'ua Українська',
@@ -260,6 +261,7 @@ export const languages = {
       'contact.form.button.repeat': 'Спробувати ще раз',
     },
     ru: {
+        'loader.title': 'Загрузка ...',
         'menu.title': 'Меню',
         'nav.city': 'Киев',
         'nav.lang': 'ru Русский',
@@ -506,6 +508,7 @@ export const languages = {
         'contact.form.button.repeat': 'Попробовать еще раз',
       },
     en: {
+      'loader.title': 'Loading ...',
       'menu.title': 'Menu',
       'nav.city': 'Kyiv',
       'nav.lang': 'en English',

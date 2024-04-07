@@ -2,10 +2,13 @@
 import Footer from "../components/Footer.astro";
 import Head from "../components/head/Head.astro";
 import Header from "../components/head/Header.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 
+
+
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const { title = "VRATSKYI" } = Astro.props;
 ---
 
@@ -22,6 +25,7 @@ const { title = "VRATSKYI" } = Astro.props;
     >
       <div class="grid place-content-center place-items-center w-full h-full">
         <span class="loading loading-spinner w-44 text-inherit"></span>
+        <p class="mt-10 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-light text-3xl">{t('loader.title')}</p>
       </div>
     </div>
     <slot />
