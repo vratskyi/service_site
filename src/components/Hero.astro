@@ -1,7 +1,7 @@
 ---
 import { Picture } from 'astro:assets'
 import Stats from './AuthorStats.astro'
-import author from '../images/oleksii-vratskyi.png'
+import author from '../images/oleksii-vratskyi-200.png'
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -18,7 +18,17 @@ const t = useTranslations(lang);
 
   <div class="grid lg:grid-flow-col not-prose p-3 lg:p-0">
     <div class="order-first lg:order-last place-self-center">
-      <Picture src={author} alt="Oleksii Vratskyi" loading='eager' formats={['avif', 'webp']} width='200' height='200' class='object-cover object-center rounded-full ring-[6px] ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10 size-[200px]' />
+      <Picture 
+      src={author} 
+      alt="Oleksii Vratskyi" 
+      loading='eager' 
+      decoding='async' 
+      srcset={'../images/oleksii-vratskyi-200.png 2x, ../images/oleksii-vratskyi-100.png 1x'} 
+      formats={['avif', 'webp']} 
+      width='200' 
+      height='200' 
+      class='object-cover object-center rounded-full ring-[6px] ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10' 
+      />
     </div>
     
     <div class="grid lg:grid-flow-col gap-y-20 lg:gap-y-0 place-content-between place-items-center mt-10 lg:mt-0">
