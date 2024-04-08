@@ -10,11 +10,11 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://vratsky.vercel.app',
   integrations: [tailwind(), compress({
-    CSS: false,
-    HTML: false,
+    CSS: true,
+    HTML: true,
     Image: true,
     JavaScript: true,
-    SVG: false
+    SVG: true
   }), mdx({
     syntaxHighlight: "shiki",
     shikiConfig: {
