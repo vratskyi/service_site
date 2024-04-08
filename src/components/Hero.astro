@@ -28,13 +28,13 @@ const t = useTranslations(lang);
       formats={['avif', 'webp']} 
       width='200' 
       height='200' 
-      class='hidden object-cover object-center rounded-full ring-[6px] ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10' 
+      class='invisible object-cover object-center rounded-full ring-[6px] ring-primary ring-offset-base-100 ring-offset-2 shadow-xl shadow-secondary/10' 
       />
       <script type="text/javascript" is:inline>
       const heroPicture = document.getElementById('heroPicture');
       
       window.addEventListener('load', () =>  {
-        heroPicture.classList.remove('hidden');
+        heroPicture.classList.remove('invisible');
       })
 
       </script>
