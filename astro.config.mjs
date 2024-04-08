@@ -11,7 +11,7 @@ export default defineConfig({
   site: 'https://vratsky.vercel.app',
   integrations: [tailwind(), compress({
     CSS: true,
-    HTML: true,
+    HTML: false,
     Image: true,
     JavaScript: true,
     SVG: true
