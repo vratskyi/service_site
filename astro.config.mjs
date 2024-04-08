@@ -3,8 +3,9 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel/serverless";
-
 import sitemap from "@astrojs/sitemap";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,10 +31,10 @@ export default defineConfig({
       locales: {
         ru: 'ru-RU',
         ua: 'uk-UA',
-        en: 'en-US',
-      },
-    },
-  })],
+        en: 'en-US'
+      }
+    }
+  }), partytown()],
   // i18n settings
   i18n: {
     defaultLocale: "ru",
