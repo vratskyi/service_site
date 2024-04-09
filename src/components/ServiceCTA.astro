@@ -1,0 +1,42 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh">
+  <div
+    class="grid lg:grid-flow-col place-content-center lg:place-content-between place-items-center w-full"
+  >
+    <div class="text-left p-5 md:p-10 max-w-xl rounded-box bg-base-300 animate">
+      <div class="mt-6 text-lg leading-8 grid gap-y-3">
+          <p>
+              {t('service.screen.video.paragraph.1')}
+            </p>
+        
+            <p>
+                {t('service.screen.video.paragraph.2')}
+        </p>
+        <p>
+            {t('service.screen.video.paragraph.3')}
+        </p>
+    </div>
+    </div>
+    <div class="mockup-phone border place-self-center animate bg-base-300">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-1">
+          <video
+            class="rounded-box w-full h-full"
+            src="/videos/cta-video-oleksii-vratskyi.mp4"
+            poster="/videos/cta-video-oleksii-vratskyi-placeholder.png"
+            width="400"
+            height="800"
+            preload="metadata"
+            controls></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

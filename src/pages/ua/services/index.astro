@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro'
 import services from '../../../images/services.png'
 
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import ServiceCTA from '../../../components/ServiceCTA.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -44,6 +45,8 @@ const t = useTranslations(lang);
       </div>
     
     </section>
+    
+    <ServiceCTA />
 
     <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
       <div class="relative isolate">
