@@ -11,8 +11,8 @@ const t = useTranslations(lang);
 <Layout title=`${t('nav.affiliate')} - VRATSKYI`>
 
     <div class="mx-auto w-full max-w-[1024px] my-[80px]">
-        <section class="grid grid-flow-col place-content-between">
-            <div class="p-5 lg:p-10">
+        <section class="grid lg:grid-flow-col place-content-center lg:place-content-between p-3 lg:p-10">
+            <div class="lg:p-10">
                 <h1 class="text-6xl">Партнерская программа</h1>
                 <p class="text-xl text-pretty">
                     Я ценю открытость и прозрачность в отношениях. Моей целью является честное и взаимовыгодное сотрудничество, по стратегии Win Win. 
@@ -23,8 +23,8 @@ const t = useTranslations(lang);
                     <a href="#steps" class="btn bg-base-300">Этапы сотрудничества</a>
                 </div>
             </div>
-            <div>
-                <Picture class="rounded-box max-w-[500px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
+            <div class="order-first lg:order-last">
+                <Picture class="rounded-box mx-auto max-w-[350px] lg:max-w-[400px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
             </div>
         </section>
         
@@ -102,38 +102,38 @@ const t = useTranslations(lang);
                 <div class="mt-20 grid place-content-center place-items-center gap-5 w-full">
 
                     <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">1</span>
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">1</span>
                         <h3 class="font-black text-2xl">Поиск потенциальных клиентов</h3>
                         <p>
                             Используйте свои контакты, рекламные доски, участвуйте в форумах и других онлайн-сообществах, где могут быть заинтересованные лица. Активно распространяйте информацию об услугах, чтобы привлечь внимание потенциальных клиентов.
                         </p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">2</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">2</span>
                         <h3 class="font-black text-2xl">Выяснение потребностей клиента</h3>
                         <p>
                             Выясните, в чем именно заключается потребность клиента и какие задачи или проблемы он хочет решить. Проведите детальный анализ его запросов и ожиданий, чтобы предложить наиболее эффективное решение для его потребностей.
                         </p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">3</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">3</span>
                         <h3 class="font-black text-2xl">Презентация услуг</h3>
                         <p>
                             Покажите клиентам преимущества и ценность услуг, выделяя их конкурентные преимущества и способы, которыми они могут помочь решить их проблемы или удовлетворить потребности. Представьте подробную информацию о моих услугах и примеры успешных проектов.
                         </p>
                     </div>
                     <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">4</span>
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">4</span>
                         <h3 class="font-black text-2xl">Перенаправление клиента</h3>
                         <p>После того как клиент заинтересован в услугах, направьте его ко мне для более детального обсуждения будущего проекта и заключения сделки. Предоставьте ему мои контактные данные и убедитесь, что он готов к общению.</p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">5</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">5</span>
                         <h3 class="font-black text-2xl">Заключение сделки</h3>
                         <p>После тщательного выяснения всех потребностей клиента и учёта всех его пожеланий, составляется договор, в котором будут чётко указаны все необходимые положения, условия и стоимость предлагаемых услуг.</p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">6</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">6</span>
                         <h3 class="font-black text-2xl">Оплата комиссии</h3>
                         <p>После успешного подписания договора и оплаты аванса клиентом вы получаете свои комиссионные удобным для вас способом в размере до 10% от сделки, чем больше сумма сделки тем больше комисиия но не более 10% от сделки.</p>
                     </div>

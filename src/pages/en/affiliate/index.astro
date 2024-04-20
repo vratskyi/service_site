@@ -11,7 +11,7 @@ const t = useTranslations(lang);
 <Layout title=`${t('nav.affiliate')} - VRATSKYI`>
 
     <div class="mx-auto w-full max-w-[1024px] my-[80px]">
-        <section class="grid grid-flow-col place-content-between">
+        <section class="grid lg:grid-flow-col place-content-center lg:place-content-between">
             <div class="p-5 lg:p-10">
                 <h1 class="text-6xl">Affiliate Program</h1>
                 <p class="text-xl text-pretty">
@@ -23,8 +23,8 @@ const t = useTranslations(lang);
                     <a href="#steps" class="btn bg-base-300">Stages of cooperation</a>
                 </div>
             </div>
-            <div>
-                <Picture class="rounded-box max-w-[500px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
+            <div class="order-first lg:order-last">
+                <Picture class="rounded-box mx-auto max-w-[350px] lg:max-w-[400px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
             </div>
         </section>
         
@@ -101,38 +101,38 @@ const t = useTranslations(lang);
                 <div class="mt-20 grid place-content-center place-items-center gap-5 w-full">
 
                     <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">1</span>
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">1</span>
                         <h3 class="font-black text-2xl">Finding potential customers</h3>
                         <p>
                           Use your contacts, advertising boards, participate in forums and other online communities where there may be interested parties. Actively disseminate information about your services to attract the attention of potential clients.
                         </p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">2</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">2</span>
                         <h3 class="font-black text-2xl">Clarification of client needs</h3>
                         <p>
                           Find out exactly what the client's needs are and what tasks or problems they want to solve. Conduct a detailed analysis of their needs and expectations in order to offer the most effective solution for their needs.
                         </p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">3</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">3</span>
                         <h3 class="font-black text-2xl">Presentation of services</h3>
                         <p>
                           Show your clients the benefits and value of your services by highlighting their competitive advantages and the ways they can help solve their problems or meet their needs. Provide detailed information about my services and examples of successful projects.
                         </p>
                     </div>
                     <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">4</span>
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">4</span>
                         <h3 class="font-black text-2xl">Customer redirection</h3>
                         <p>Once the client is interested in the services, refer him to me to discuss the future project in more detail and close the deal. Provide him with my contact details and make sure he is ready to communicate.</p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">5</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">5</span>
                         <h3 class="font-black text-2xl">Closing the deal</h3>
                         <p>After careful clarification of all the needs of the client and taking into account all his wishes, a contract is drawn up, which will clearly indicate all the necessary provisions, terms and conditions and the cost of the proposed services.</p>
                     </div>
-                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
-                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">6</span>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 lg:col-span-1 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-3xl lg:text-5xl absolute top-5 left-5 font-black text-primary">6</span>
                         <h3 class="font-black text-2xl">Payment of commission</h3>
                         <p>After successful signing of the contract and payment of the advance payment by the client you receive your commission in a convenient way for you in the amount of up to 10% of the transaction, the greater the amount of the transaction the greater the commission but not more than 10% of the transaction.</p>
                     </div>
