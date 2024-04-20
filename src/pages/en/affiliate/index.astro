@@ -1,0 +1,173 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { Picture } from "astro:assets"
+import affiliate from '../../../images/affiliate-program-vratskyi.png'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title=`${t('nav.affiliate')} - VRATSKYI`>
+
+    <div class="mx-auto w-full max-w-[1024px] my-[80px]">
+        <section class="grid grid-flow-col place-content-between">
+            <div class="p-5 lg:p-10">
+                <h1 class="text-6xl">Affiliate Program</h1>
+                <p class="text-xl text-pretty">
+                  I value openness and transparency in relationships. My goal is honest and mutually beneficial cooperation, according to Win Win strategy. 
+                  Further I will explain in detail my goals, expectations and how we can interact. Also I will gladly listen to your suggestions.
+                </p>
+                <div class="grid grid-flow-col gap-x-5 mt-10">
+                    <a href={`/${lang}/contact`} class="btn btn-primary">Text me</a>
+                    <a href="#steps" class="btn bg-base-300">Stages of cooperation</a>
+                </div>
+            </div>
+            <div>
+                <Picture class="rounded-box max-w-[500px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
+            </div>
+        </section>
+        
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                  Honest commission
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                  I offer an adequate and competitive commission for each successful client brought by your efforts. The commission system takes your hard work into account and motivates you to actively promote our services.
+                </p>
+              </div>
+        
+        </section>
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                  Mutual support
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                  I am ready to provide you with all the information you need about our company, project portfolios, and client testimonials. I believe that your success is also my success and I am ready to support you in all aspects of your work.
+                </p>
+              </div>
+        
+        </section>
+
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                  Feedback and improvement
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                  I value your opinion and am ready to hear your ideas and suggestions on how to improve our cooperation. Open feedback will help us create partnerships that will be successful on a long-term basis.
+                </p>
+              </div>
+        
+        </section>
+
+        <section id="steps" class="h-full min-h-svh scroll-m-20">
+        
+            <div class="mx-auto not-prose mt-40 text-center grid place-content-center place-items-center">
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                  Stages of cooperation
+                </h2>
+                <div class="mt-20 grid place-content-center place-items-center gap-5 w-full">
+
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">1</span>
+                        <h3 class="font-black text-2xl">Finding potential customers</h3>
+                        <p>
+                          Use your contacts, advertising boards, participate in forums and other online communities where there may be interested parties. Actively disseminate information about your services to attract the attention of potential clients.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">2</span>
+                        <h3 class="font-black text-2xl">Clarification of client needs</h3>
+                        <p>
+                          Find out exactly what the client's needs are and what tasks or problems they want to solve. Conduct a detailed analysis of their needs and expectations in order to offer the most effective solution for their needs.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">3</span>
+                        <h3 class="font-black text-2xl">Presentation of services</h3>
+                        <p>
+                          Show your clients the benefits and value of your services by highlighting their competitive advantages and the ways they can help solve their problems or meet their needs. Provide detailed information about my services and examples of successful projects.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">4</span>
+                        <h3 class="font-black text-2xl">Customer redirection</h3>
+                        <p>Once the client is interested in the services, refer him to me to discuss the future project in more detail and close the deal. Provide him with my contact details and make sure he is ready to communicate.</p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">5</span>
+                        <h3 class="font-black text-2xl">Closing the deal</h3>
+                        <p>After careful clarification of all the needs of the client and taking into account all his wishes, a contract is drawn up, which will clearly indicate all the necessary provisions, terms and conditions and the cost of the proposed services.</p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">6</span>
+                        <h3 class="font-black text-2xl">Payment of commission</h3>
+                        <p>After successful signing of the contract and payment of the advance payment by the client you receive your commission in a convenient way for you in the amount of up to 10% of the transaction, the greater the amount of the transaction the greater the commission but not more than 10% of the transaction.</p>
+                    </div>
+
+
+                </div>
+              </div>
+        
+        </section>
+
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                  Let's cooperate together
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                  Write to me and we can discuss individual terms of cooperation, as well as at will possible to sign a cooperation agreement.                    
+                </p>
+                <div class="mt-10 animate">
+                    <a href={`/${lang}/contact`} class="btn btn-primary">Discuss details of cooperation</a>
+                </div>
+              </div>
+        
+        </section>
+
+    </div>
+    
+</Layout>

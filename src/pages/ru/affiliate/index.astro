@@ -1,0 +1,174 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { Picture } from "astro:assets"
+import affiliate from '../../../images/affiliate-program-vratskyi.png'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title=`${t('nav.affiliate')} - VRATSKYI`>
+
+    <div class="mx-auto w-full max-w-[1024px] my-[80px]">
+        <section class="grid grid-flow-col place-content-between">
+            <div class="p-5 lg:p-10">
+                <h1 class="text-6xl">Партнерская программа</h1>
+                <p class="text-xl text-pretty">
+                    Я ценю открытость и прозрачность в отношениях. Моей целью является честное и взаимовыгодное сотрудничество, по стратегии Win Win. 
+                    Далее подробно объясню мои цели, ожидания и то как мы можем взаимодействовать. Так-же я с удовольствием выслушаю Ваши предложения.
+                </p>
+                <div class="grid grid-flow-col gap-x-5 mt-10">
+                    <a href={`/${lang}/contact`} class="btn btn-primary">Написать мне</a>
+                    <a href="#steps" class="btn bg-base-300">Этапы сотрудничества</a>
+                </div>
+            </div>
+            <div>
+                <Picture class="rounded-box max-w-[500px] object-cover object-center" width='500' height='600' loading="eager" src={affiliate} alt="Affiliate program Vratskyi" formats={['avif', 'webp']} />
+            </div>
+        </section>
+        
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                    Честная комиссия
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                    Я предлагаю адекватную и конкурентоспособную комиссию за каждого успешного клиента, приведенного вашими усилиями. Система комиссий учитывает ваш труд и мотивирует активное продвижение наших услуг.
+                </p>
+              </div>
+        
+        </section>
+
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                    Взаимная поддержка
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                    Я готов предоставить вам всю необходимую информацию о нашей компании, портфолио проектов, а также отзывы клиентов. Я считаю, что ваш успех - это и мой успех, и готов поддерживать вас во всех аспектах вашей работы.
+                </p>
+              </div>
+        
+        </section>
+
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                    Обратная связь и улучшение
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                    Я ценю ваше мнение и готов услышать ваши идеи и предложения по улучшению нашего сотрудничества. Открытая обратная связь поможет нам создать партнерские отношения, которые будут успешны на долгосрочной основе.
+                </p>
+              </div>
+        
+        </section>
+
+        <section id="steps" class="h-full min-h-svh scroll-m-20">
+        
+            <div class="mx-auto not-prose mt-40 text-center grid place-content-center place-items-center">
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                    Этапы сотрудничества
+                </h2>
+                <div class="mt-20 grid place-content-center place-items-center gap-5 w-full">
+
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">1</span>
+                        <h3 class="font-black text-2xl">Поиск потенциальных клиентов</h3>
+                        <p>
+                            Используйте свои контакты, рекламные доски, участвуйте в форумах и других онлайн-сообществах, где могут быть заинтересованные лица. Активно распространяйте информацию об услугах, чтобы привлечь внимание потенциальных клиентов.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">2</span>
+                        <h3 class="font-black text-2xl">Выяснение потребностей клиента</h3>
+                        <p>
+                            Выясните, в чем именно заключается потребность клиента и какие задачи или проблемы он хочет решить. Проведите детальный анализ его запросов и ожиданий, чтобы предложить наиболее эффективное решение для его потребностей.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">3</span>
+                        <h3 class="font-black text-2xl">Презентация услуг</h3>
+                        <p>
+                            Покажите клиентам преимущества и ценность услуг, выделяя их конкурентные преимущества и способы, которыми они могут помочь решить их проблемы или удовлетворить потребности. Представьте подробную информацию о моих услугах и примеры успешных проектов.
+                        </p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 col-span-2 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">4</span>
+                        <h3 class="font-black text-2xl">Перенаправление клиента</h3>
+                        <p>После того как клиент заинтересован в услугах, направьте его ко мне для более детального обсуждения будущего проекта и заключения сделки. Предоставьте ему мои контактные данные и убедитесь, что он готов к общению.</p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">5</span>
+                        <h3 class="font-black text-2xl">Заключение сделки</h3>
+                        <p>После тщательного выяснения всех потребностей клиента и учёта всех его пожеланий, составляется договор, в котором будут чётко указаны все необходимые положения, условия и стоимость предлагаемых услуг.</p>
+                    </div>
+                    <div class="p-5 lg:p-16 rounded-box bg-base-300 relative grid gap-y-5 place-self-stretch animate">
+                        <span class="text-5xl absolute top-5 left-5 font-black text-primary">6</span>
+                        <h3 class="font-black text-2xl">Оплата комиссии</h3>
+                        <p>После успешного подписания договора и оплаты аванса клиентом вы получаете свои комиссионные удобным для вас способом в размере до 10% от сделки, чем больше сумма сделки тем больше комисиия но не более 10% от сделки.</p>
+                    </div>
+
+
+                </div>
+              </div>
+        
+        </section>
+
+
+        <section class="min-h-svh">
+        
+            <div class="mx-auto not-prose mt-40 p-2 lg:mt-0 lg:h-svh text-center grid place-content-center place-items-center">
+                <div class="relative isolate">
+                  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                    <div class="aspect-[1397/845] w-[9.5625rem] lg:w-[38.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                    <div class="aspect-[543/845] w-[10.5625rem] lg:w-[35.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-[0.3] rotate-[60deg]" style="clip-path: polygon(85.5% 40.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%)"></div>
+                  </div>
+                </div>
+                <h2 class="mt-2 text-4xl md:text-6xl font-bold tracking-tight animate">
+                    Давайте сотрудничать вместе
+                </h2>
+                <p class="mt-6 text-lg leading-8 animate">
+                    Напишите мне и мы сможем обсудить индивидуальные условия сотрудничества, так-же по желанию возможно подписания договора о сотрудничестве.                    
+                </p>
+                <div class="mt-10 animate">
+                    <a href={`/${lang}/contact`} class="btn btn-primary">Обсудить детали сотрудничества</a>
+                </div>
+              </div>
+        
+        </section>
+
+    </div>
+    
+</Layout>
