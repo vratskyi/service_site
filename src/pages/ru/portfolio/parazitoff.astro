@@ -1,43 +1,64 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../../../layouts/Layout.astro'
-import PortfolioCard from '../../../components/PortfolioCard.astro'
-import byshikat from '../../../images/online-store-byshikat.png'
-import h2ovoda from '../../../images/h2ovoda.png'
-import h2ovodaOld from '../../../images/water-website.png'
-import vratskyiBlog from '../../../images/ov-main.png'
-import lmdlviv from '../../../images/online-store-lmd.png'
-import vratskyi from '../../../images/vratskyi.png'
-import h2ovodabot from '../../../images/h20vodabot.png'
 import parazitoff from '../../../images/parazitoff.png'
-
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title=`${t('nav.portfolio')} - VRATSKYI`>
+<Layout title='VRATSKYI - parazitoff'>
+
       
-    <div class="relative overflow-hidden w-full h-full">
-        <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-          <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    <div class="h-full mb-[400px] md:mb-0">
+          <div class="grid place-content-start place-self-start mt-[80px] w-full max-w-[1280px] mx-auto">
+              <div class="text-sm breadcrumbs">
+                  <ul>
+                      <li><a href={`/${lang}/`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                  <path d="M2 12.204c0-2.289 0-3.433.52-4.381c.518-.949 1.467-1.537 3.364-2.715l2-1.241C9.889 2.622 10.892 2 12 2c1.108 0 2.11.622 4.116 1.867l2 1.241c1.897 1.178 2.846 1.766 3.365 2.715c.519.948.519 2.092.519 4.38v1.522c0 3.9 0 5.851-1.172 7.063C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.212C2 19.576 2 17.626 2 13.725z" />
+                                  <path stroke-linecap="round" d="M12 15v3" />
+                              </g>
+                          </svg>
+                          Главная
+                      </a></li>
+                      <li><a href={`/${lang}/portfolio`} class="grid grid-flow-col place-content-stretch hover:text-primary duration-150">
+                          <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                  <path d="M7 2h10M5 6h14" />
+                                  <rect width="18" height="12" x="3" y="10" rx="2" />
+                              </g>
+                          </svg>
+                          Портфолио
+                        </a>
+                  </li>
+                  <li>
+                    <svg class="inline-block w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M14 6h-4c-1.356 0-2.468 0-3.39.054c-1.645.097-2.688.367-3.438 1.118C2 8.343 2 10.229 2 14c0 3.771 0 5.657 1.172 6.828C4.343 22 6.229 22 10 22h4c3.771 0 5.657 0 6.828-1.172C22 19.657 22 17.771 22 14c0-3.771 0-5.657-1.172-6.828c-.75-.75-1.793-1.02-3.437-1.118C16.468 6 15.356 6 14 6Z" />
+                            <path d="M6.61 6.054c.823-.02 1.55-.6 1.83-1.374l.035-.103L8.5 4.5c.042-.127.064-.19.086-.246a2 2 0 0 1 1.735-1.25C10.38 3 10.448 3 10.58 3h2.838c.133 0 .2 0 .26.004a2 2 0 0 1 1.735 1.25c.023.056.044.12.086.246l.026.077c.018.053.026.08.035.103c.28.775 1.007 1.354 1.83 1.374" opacity="0.5" />
+                            <path stroke-linecap="round" d="M21.662 8.72c-3.01 1.956-4.515 2.934-6.101 3.427a12 12 0 0 1-7.121 0c-1.587-.493-3.092-1.47-6.102-3.427" opacity="0.5" />
+                            <path stroke-linecap="round" d="M8 11v2m8-2v2" />
+                        </g>
+                    </svg>
+                    parazitoff
+              </li>
+                  </ul>
+                </div>
           </div>
 
-        <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start mt-[60px] lg:mt-[200px] p-5 md:p-0">
-
+          <div class="grid lg:grid-flow-col gap-x-20 place-content-center place-items-start mt-[60px] lg:mt-[80px] p-5 md:p-0">
             <div class="p-5 w-full max-w-md md:max-w-full h-full">
-              <h1 class="relative">Сайт компании ParazitOFF
-              </h1>
-              <p class="prose">
-                ParazitOFF - это профессиональная служба, предоставляющая комплексные услуги по уничтожению вредителей, микроорганизмов и устранению запахов. Компания занимается дезинфекцией, дезинсекцией, дератизацией и фумигацией для организаций и частных лиц, охватывая широкий спектр рынка.
-              </p>
-              <p class="prose">
-                Я разработал сайт для ParazitOFF на платформе WordPress. Благодаря тщательной оптимизации удалось достичь 100 баллов в Google Lighthouse, обеспечив высокую скорость загрузки и производительность. Проект был выполнен в кратчайшие сроки, и клиент полностью доволен результатом.
-              </p>
+                <h1 class="relative">Сайт компании ParazitOFF
+            </h1>
+            <p class="prose">
+              ParazitOFF - это профессиональная служба, предоставляющая комплексные услуги по уничтожению вредителей, микроорганизмов и устранению запахов. Компания занимается дезинфекцией, дезинсекцией, дератизацией и фумигацией для организаций и частных лиц, охватывая широкий спектр рынка.
+            </p>
+            <p class="prose">
+              Я разработал сайт для ParazitOFF на платформе WordPress. Благодаря тщательной оптимизации удалось достичь 100 баллов в Google Lighthouse, обеспечив высокую скорость загрузки и производительность. Проект был выполнен в кратчайшие сроки, и клиент полностью доволен результатом.
+            </p>
             <div class="grid grid-flow-col gap-x-5 place-content-center place-items-start overflow-x-auto snap-x snap-mandatory mt-10 bg-base-200/20 backdrop-blur-3xl rounded-box p-5 lg:p-10">
               <div class="grid place-items-center scroll-ml-5 snap-center ml-40 md:ml-0">
                 <svg class="inline-block w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -118,169 +139,12 @@ const t = useTranslations(lang);
                       <div class="input"><a class="hover:text-primary duration-150 not-prose text-sm" href="https://parazitoff.com.ua/" target="_blank" rel="noreferrer">https://parazitoff.com.ua/</a></div>
                     </div>
                     <div class="flex justify-center bg-base-200">
-                        <Image src={parazitoff} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" alt='Сайт компании ParazitOFF' width='600' height='400' />
+                        <Image src={parazitoff} class="max-w-[600px] max-h-[400px] w-full h-full object-cover object-center" format='avif' alt='Сайт компании ParazitOFF' width='600' height='400' />
                     </div>
                   </div>
             </div>
 
         </div>
     </div>
-    
-    <div class="grid place-items-center place-content-center prose lg:prose-xl text-center mx-auto mt-20 mb-10">
-      <h2 class="font-black text-primary not-prose text-6xl mb-5">{t('portfolio.title')}</h2>
-      <p>
-        {t('portfolio.subdesc')} <br />
-      </p>
-      <p class="not-prose" set:html={t('portfolio.description')}></p>
-    </div>
 
-
-    <div class="my-10 grid grid-cols-1 lg:grid-cols-3 gap-y-10 mx-auto w-full max-w-[1366px] p-5">
-
-      <PortfolioCard 
-      image={{
-         src: parazitoff,
-         alt: `${t('portfolio.card.8.title')}`,
-      }},
-      label={t('portfolio.card.8.label')}
-      title={t('portfolio.card.8.title')}
-      description={t('portfolio.card.8.description')}
-      activeButton={{ 
-        title: `${t('portfolio.card.8.activeButton')}`,
-        link: `/${lang}/portfolio/parazitoff`
-      }},
-      exturnalButton={{ 
-        title: `${t('portfolio.card.8.exturnalButton')}`,
-        link: 'https://parazitoff.com.ua/'
-      }}
-       />
-
-      <PortfolioCard 
-      image={{
-         src: vratskyi,
-         alt: `${t('portfolio.card.6.title')}`,
-      }},
-      label={t('portfolio.card.6.label')}
-      title={t('portfolio.card.6.title')}
-      description={t('portfolio.card.6.description')}
-      activeButton={{ 
-        title: `${t('portfolio.card.6.activeButton')}`,
-        link: `/${lang}/portfolio/vratskyi`
-      }},
-      exturnalButton={{ 
-        title: `${t('portfolio.card.6.exturnalButton')}`,
-        link: 'https://vratsky.vercel.app/ru/'
-      }}
-       />
-
-       <PortfolioCard 
-       image={{
-          src: h2ovodabot,
-          alt: `${t('portfolio.card.7.title')}`,
-       }},
-       label={t('portfolio.card.7.label')}
-       title={t('portfolio.card.7.title')}
-       description={t('portfolio.card.7.description')}
-       activeButton={{ 
-         title: `${t('portfolio.card.7.activeButton')}`,
-         link: `/${lang}/portfolio/h2ovodabot`
-       }},
-       exturnalButton={{ 
-         title: `${t('portfolio.card.7.exturnalButton')}`,
-         link: 'https://t.me/quickorderh20voda_bot'
-       }}
-        />
-
-      <PortfolioCard 
-      image={{
-         src: h2ovoda,
-         alt: `${t('portfolio.card.1.title')}`,
-      }},
-      label={t('portfolio.card.1.label')}
-      title={t('portfolio.card.1.title')}
-      description={t('portfolio.card.1.description')}
-      activeButton={{ 
-        title: `${t('portfolio.card.1.activeButton')}`,
-        link: `/${lang}/portfolio/h2ovoda`
-      }},
-      exturnalButton={{ 
-        title: `${t('portfolio.card.1.exturnalButton')}`,
-        link: 'https://h2ovoda.com.ua/'
-      }}
-       />
-
-       <PortfolioCard 
-       image={{
-          src: vratskyiBlog,
-          alt: `${t('portfolio.card.2.title')}`,
-       }},
-       label={t('portfolio.card.2.label')}
-       title={t('portfolio.card.2.title')}
-       description={t('portfolio.card.2.description')}
-       activeButton={{ 
-         title: `${t('portfolio.card.2.activeButton')}`,
-         link: `/${lang}/portfolio/vratskyiblog`
-       }},
-       exturnalButton={{ 
-         title: `${t('portfolio.card.2.exturnalButton')}`,
-         link: 'https://vratskyi.pages.dev/en/'
-       }}
-        />
-
-        <PortfolioCard 
-        image={{
-           src: h2ovodaOld,
-           alt: `${t('portfolio.card.3.title')}`,
-        }},
-        label={t('portfolio.card.3.label')}
-        title={t('portfolio.card.3.title')}
-        description={t('portfolio.card.3.description')}
-        activeButton={{ 
-          title: `${t('portfolio.card.3.activeButton')}`,
-          link: `/${lang}/portfolio/h2ovodaold`
-        }},
-        exturnalButton={{ 
-          title: `${t('portfolio.card.3.exturnalButton')}`,
-          link: 'https://old.h2ovoda.com.ua/'
-        }}
-         />
-
-         <PortfolioCard 
-         image={{
-            src: byshikat,
-            alt: `${t('portfolio.card.4.title')}`,
-         }},
-         label={t('portfolio.card.4.label')}
-         title={t('portfolio.card.4.title')}
-         description={t('portfolio.card.4.description')}
-         activeButton={{ 
-           title: `${t('portfolio.card.4.activeButton')}`,
-           link: `/${lang}/portfolio/byshikat`
-         }},
-         exturnalButton={{ 
-           title: `${t('portfolio.card.4.exturnalButton')}`,
-           link: 'https://byshikat.com/'
-         }}
-          />
-
-          <PortfolioCard 
-          image={{
-             src: lmdlviv,
-             alt: `${t('portfolio.card.5.title')}`,
-          }},
-          label={t('portfolio.card.5.label')}
-          title={t('portfolio.card.5.title')}
-          description={t('portfolio.card.5.description')}
-          activeButton={{ 
-            title: `${t('portfolio.card.5.activeButton')}`,
-            link: `/${lang}/portfolio/lmdlvivua`
-          }},
-          exturnalButton={{ 
-            title: `${t('portfolio.card.5.exturnalButton')}`,
-            link: 'https://lmd.lviv.ua/'
-          }}
-           />
-
-    </div>
-    
 </Layout>
