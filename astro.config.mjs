@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vratskyi.github.io/service-site',
+  site: 'https://vratskyi.github.io/service_site/',
   integrations: [tailwind(), compress({
     CSS: true,
     HTML: false,
@@ -59,5 +59,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: false
   },
-  output: "static",
+  output: "hybrid",
 });
