@@ -59,5 +59,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: false
   },
-  output: "hybrid",
+  output: "static",
 });
