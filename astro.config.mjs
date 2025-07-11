@@ -15,7 +15,7 @@ export default defineConfig({
     HTML: false,
     Image: true,
     JavaScript: true,
-    SVG: true
+    SVG: false
   }), mdx({
     syntaxHighlight: "shiki",
     shikiConfig: {
