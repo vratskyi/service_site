@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vratsky.vercel.app',
+  site: 'https://service-site-git-master-codeforge.vercel.app',
   integrations: [tailwind(), compress({
     CSS: true,
     HTML: false,
@@ -59,7 +59,7 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: false
   },
-  output: "hybrid",
+  output: "static",
   adapter: vercel({
     functionPerRoute: true,
     imageService: true,
